@@ -1,14 +1,11 @@
-function clic(){
-	if(infoStyle.visibility === "hidden"){
-		infoStyle.visibility = "visible";
-	}
-	else{
-		infoStyle.visibility = "hidden";
-	}
-}
+var pseudoElt = document.getElementById("pseudo");
+pseudoElt.value = "MonPseudo";
 
-var infoStyle = document.getElementById("infos").style;
-var bouton = document.getElementById("bouton");
-
-infoStyle.visibility = "hidden";
-bouton.addEventListener("click", clic);
+// Affichage d'un message contextuel pour la saisie du pseudo
+pseudoElt.addEventListener("focus", function () {
+    document.getElementById("aidePseudo").textContent = "Entrez votre pseudo";
+});
+// Suppression du message contextuel pour la saisie du pseudo
+pseudoElt.addEventListener("blur", function (e) {
+    document.getElementById("aidePseudo").textContent = "";
+});
