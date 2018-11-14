@@ -5,45 +5,72 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" crossorigin="anonymous">
+    <link href="css/colorcodes.css" rel="stylesheet">
     <link href="css/stickyfooter.css" rel="stylesheet">
     <link href="css/stickynavbar.css" rel="stylesheet">
-    <link href="css/colorcodes.css" rel="stylesheet">
-    <script src="js/bootstrap/bootstrap.min.js"></script>
   </head>
 
   <body>
-    <nav class="navbar ">
-        <a class="navbar-brand">Fil d'actualité</a>
-        <form class="form-inline">
-            <a class="nav-item nav-link"  href="#"><i class="fas fa-search nav-ico"></i></a>
-            <a class="nav-item nav-link" href="#"><i class="fas fa-filter nav-ico"></i></a>
-            <a class="nav-item nav-link" href="#"><i class="fas fa-user nav-ico"></i></a>
-        </form>
-    </nav>
+      <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
+          <header class="bmd-layout-header">
+              <nav class="navbar">
+                  <a class="navbar-brand">Fil d'actualité</a>
+                  <form class="form-inline">
+                      <a class="nav-item nav-link"><i class="fas fa-search nav-ico"></i></a>
+                      <a class="nav-item nav-link"><i class="fas fa-filter nav-ico"></i></a>
+                      <a class="nav-item nav-link" data-toggle="drawer" data-target="#dw-s1"><i class="fas fa-user nav-ico"></i></a>
+                  </form>
+              </nav>
+          </header>
+          <div id="dw-s1" class="bmd-layout-drawer bg-faded">
+            <header>
+              <a class="navbar-brand">Bonjour Rémi !</a>
+            </header>
+            <div class="drawer-menu">
+              <ul class="list-group">
+                <a class="list-group-item"><i class="fas fa-user-circle fa-2x"></i>Mes infos</a>
+                <a class="list-group-item"><i class="fas fa-star fa-2x"></i>Mes favoris</a>
+                <a class="list-group-item"><i class="fas fa-envelope fa-2x"></i>Nous contacter</a>
+              </ul>
+            </div>
+            <div class="drawer-buttons">
+              <button type="button" class="btn btn-outline-danger drawer-button">Déconnexion</button>
+            </div>
+          </div>
+          <main class="bmd-layout-content">
+            <div class="container">
+              <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed diam lectus. Maecenas quis ullamcorper elit. Nunc imperdiet sem tortor. Donec ullamcorper, justo vitae gravida imperdiet, libero nibh molestie ante, vitae facilisis leo leo ut urna. Aliquam pharetra metus at orci semper porttitor eget at ipsum. Suspendisse sed pharetra risus. Proin sapien turpis, posuere ut blandit dapibus, ornare non nisl. Sed at ultricies augue. Vestibulum in pulvinar nunc. Nunc elementum luctus massa, at tristique odio fermentum in. Phasellus ac nunc id eros maximus eleifend ac id ex. Integer pellentesque orci vel tortor eleifend, et gravida nibh auctor. Aenean et felis id nulla imperdiet volutpat. Morbi eu ex lorem. Nulla efficitur magna eget eros facilisis, in faucibus lectus tincidunt. Duis ut eros tempus, pellentesque neque vestibulum, commodo risus.
 
-    <div class="container-fluid">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed diam lectus. Maecenas quis ullamcorper elit. Nunc imperdiet sem tortor. Donec ullamcorper, justo vitae gravida imperdiet, libero nibh molestie ante, vitae facilisis leo leo ut urna. Aliquam pharetra metus at orci semper porttitor eget at ipsum. Suspendisse sed pharetra risus. Proin sapien turpis, posuere ut blandit dapibus, ornare non nisl. Sed at ultricies augue. Vestibulum in pulvinar nunc. Nunc elementum luctus massa, at tristique odio fermentum in. Phasellus ac nunc id eros maximus eleifend ac id ex. Integer pellentesque orci vel tortor eleifend, et gravida nibh auctor. Aenean et felis id nulla imperdiet volutpat. Morbi eu ex lorem. Nulla efficitur magna eget eros facilisis, in faucibus lectus tincidunt. Duis ut eros tempus, pellentesque neque vestibulum, commodo risus.
+                  Cras tempor placerat diam, quis tempus felis fermentum at. Quisque tristique odio lorem, nec ullamcorper dui fringilla et. Vestibulum varius mauris vitae velit sodales tincidunt. Nulla facilisi. Aliquam erat volutpat. Vestibulum auctor enim in libero viverra, sit amet tempus dolor finibus. Sed rutrum, ipsum vitae maximus blandit, massa lacus laoreet turpis, id suscipit magna lectus eu risus. Nullam sit amet mollis tortor. Phasellus quam diam, interdum sit amet auctor sed, tempus ut metus. Nullam molestie massa libero, sit amet molestie mi convallis sit amet. Proin turpis justo, venenatis sit amet vehicula nec, pharetra a est. Morbi pellentesque ornare quam, sed maximus sapien venenatis sodales.
+                  
+                  Aliquam consequat lorem nulla, vitae volutpat risus finibus eget. Morbi pulvinar volutpat lectus a molestie. Pellentesque ullamcorper congue nibh, eu interdum nisl consectetur eget. In hac habitasse platea dictumst. Curabitur tincidunt auctor nulla ut accumsan. Morbi non turpis porta, sollicitudin mauris nec, convallis felis. Fusce et metus at nulla imperdiet tincidunt. Donec facilisis convallis eros, in consequat odio facilisis sit amet.
+                  
+                  Sed lacinia, tellus nec hendrerit hendrerit, elit neque vulputate erat, eu convallis risus purus eu turpis. Donec porttitor suscipit quam. Donec id arcu orci. Phasellus fermentum nisl urna, nec commodo ipsum viverra non. Cras felis arcu, rutrum eget accumsan laoreet, scelerisque eget magna. Aenean sed tempor urna. Fusce accumsan, enim eu varius hendrerit, mi justo euismod libero, eu euismod libero lacus sit amet sem. Praesent sed lectus erat. Ut ut aliquet lectus, a pulvinar ligula. In eu nunc imperdiet, dignissim sem eget, eleifend est. Nam porta faucibus nunc non ullamcorper.
+          
+                  Nulla id maximus augue, nec feugiat quam. Integer lectus nisl, ultricies sed tincidunt nec, scelerisque vel lorem. Fusce non ornare ligula. Vivamus molestie in ligula vel viverra. Maecenas rhoncus libero urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc quis lorem fringilla, aliquam libero vel, ornare ex. Phasellus neque tortor, consectetur vel aliquet a, sollicitudin sed est.
+              </p>
+            </div>
 
-        Cras tempor placerat diam, quis tempus felis fermentum at. Quisque tristique odio lorem, nec ullamcorper dui fringilla et. Vestibulum varius mauris vitae velit sodales tincidunt. Nulla facilisi. Aliquam erat volutpat. Vestibulum auctor enim in libero viverra, sit amet tempus dolor finibus. Sed rutrum, ipsum vitae maximus blandit, massa lacus laoreet turpis, id suscipit magna lectus eu risus. Nullam sit amet mollis tortor. Phasellus quam diam, interdum sit amet auctor sed, tempus ut metus. Nullam molestie massa libero, sit amet molestie mi convallis sit amet. Proin turpis justo, venenatis sit amet vehicula nec, pharetra a est. Morbi pellentesque ornare quam, sed maximus sapien venenatis sodales.
-        
-        Aliquam consequat lorem nulla, vitae volutpat risus finibus eget. Morbi pulvinar volutpat lectus a molestie. Pellentesque ullamcorper congue nibh, eu interdum nisl consectetur eget. In hac habitasse platea dictumst. Curabitur tincidunt auctor nulla ut accumsan. Morbi non turpis porta, sollicitudin mauris nec, convallis felis. Fusce et metus at nulla imperdiet tincidunt. Donec facilisis convallis eros, in consequat odio facilisis sit amet.
-        
-        Sed lacinia, tellus nec hendrerit hendrerit, elit neque vulputate erat, eu convallis risus purus eu turpis. Donec porttitor suscipit quam. Donec id arcu orci. Phasellus fermentum nisl urna, nec commodo ipsum viverra non. Cras felis arcu, rutrum eget accumsan laoreet, scelerisque eget magna. Aenean sed tempor urna. Fusce accumsan, enim eu varius hendrerit, mi justo euismod libero, eu euismod libero lacus sit amet sem. Praesent sed lectus erat. Ut ut aliquet lectus, a pulvinar ligula. In eu nunc imperdiet, dignissim sem eget, eleifend est. Nam porta faucibus nunc non ullamcorper.
-
-        Nulla id maximus augue, nec feugiat quam. Integer lectus nisl, ultricies sed tincidunt nec, scelerisque vel lorem. Fusce non ornare ligula. Vivamus molestie in ligula vel viverra. Maecenas rhoncus libero urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc quis lorem fringilla, aliquam libero vel, ornare ex. Phasellus neque tortor, consectetur vel aliquet a, sollicitudin sed est.
-    </div>
-
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <i class="col far fa-newspaper fa-1x footer-ico-active"></i>
-          <i class="col fas fa-list-ul fa-1x footer-ico"></i>
-          <i class="col far fa-calendar-check fa-1x footer-ico"></i>
-        </div>
+            <footer class="footer">
+              <div class="container">
+                <div class="row">
+                  <i class="col far fa-newspaper fa-1x footer-ico-active" ></i>
+                  <i class="col fas fa-list-ul fa-1x footer-ico"></i>
+                  <i class="col far fa-calendar-check fa-1x footer-ico" data-toggle="drawer" data-target="#dw-s2"></i>
+                </div>
+              </div>
+            </footer>
+          </main>
       </div>
-    </footer>
+
+   
   </body>
 </html>

@@ -14,3 +14,34 @@
 .nav-ico{
     color: var(--main-lightgrey);
 }
+
+.bmd-layout-header{
+    position: fixed;
+}
+
+.bmd-layout-content{
+    margin-top: 60px;
+}
+
+
+.drawer-menu{
+    height: 100px;
+ margin-left : auto;
+ margin-right: auto;
+}
+
+.drawer-buttons{
+    position: relative;
+    width: 100%;
+    margin-left : auto;
+    margin-right: auto;
+    bottom:0;
+}
+
+.drawer-button{
+    width: 80%;
+    margin-left : auto;
+    margin-right: auto;
+    margin-top: 80%;
+    position: absolute;
+}

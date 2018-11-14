@@ -26,7 +26,6 @@ body {
 }
 
 .footer-ico-active {
-  border: 6px solid red;
   color: var(--main-red);
   text-align: center;
   line-height: var(--main-navheight);
