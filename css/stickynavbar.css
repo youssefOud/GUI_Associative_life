@@ -3,5 +3,6 @@
     width: 100%;
     height: var(--main-navheight); /* Set the fixed height of the footer here */
     line-height: var(--main-navheight); /* Vertically center the text there */
-    background-color: #D6180A;
+    background-color: var(--main-red);
+
 }
