@@ -4,5 +4,13 @@
     height: var(--main-navheight); /* Set the fixed height of the footer here */
     line-height: var(--main-navheight); /* Vertically center the text there */
     background-color: var(--main-red);
+    color: var(--main-lightgrey);
+}
 
+.navbar-brand{
+    color: var(--main-lightgrey);
+}
+
+.nav-ico{
+    color: var(--main-lightgrey);
 }

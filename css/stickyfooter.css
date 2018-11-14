@@ -4,15 +4,33 @@ html {
     position: relative;
     min-height: 100%;
   }
-  body {
-    margin-bottom: 60px; /* Margin bottom by footer height */
-  }
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 52px; /* Set the fixed height of the footer here */
-    line-height: 52px; /* Vertically center the text there */
-    background-color: var(--main-grey);
-  }
+body {
+  margin-bottom:  var(--main-navheight); /* Margin bottom by footer height */
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: var(--main-navheight); /* Set the fixed height of the footer here */
+  line-height: var(--main-navheight); /* Vertically center the text there */
+  background-color: var( --main-lightgrey);
+}
+
+.footer-ico {
+  color: var(--main-darkgrey);
+  text-align: center;
+  line-height: var(--main-navheight);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.footer-ico-active {
+  border: 6px solid red;
+  color: var(--main-red);
+  text-align: center;
+  line-height: var(--main-navheight);
+  margin-right: auto;
+  margin-left: auto;
+}
   

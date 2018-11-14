@@ -7,26 +7,21 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link href="css/fontawesome/fontawesome-all.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link href="css/stickyfooter.css" rel="stylesheet">
     <link href="css/stickynavbar.css" rel="stylesheet">
     <link href="css/colorcodes.css" rel="stylesheet">
     <script src="js/bootstrap/bootstrap.min.js"></script>
   </head>
+
   <body>
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
-          </div>
-        </div>
+    <nav class="navbar ">
+        <a class="navbar-brand">Fil d'actualité</a>
+        <form class="form-inline">
+            <a class="nav-item nav-link"  href="#"><i class="fas fa-search nav-ico"></i></a>
+            <a class="nav-item nav-link" href="#"><i class="fas fa-filter nav-ico"></i></a>
+            <a class="nav-item nav-link" href="#"><i class="fas fa-user nav-ico"></i></a>
+        </form>
     </nav>
 
     <div class="container-fluid">
@@ -43,7 +38,11 @@
 
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">Place sticky footer content here.</span>
+        <div class="row">
+          <i class="col far fa-newspaper fa-1x footer-ico-active"></i>
+          <i class="col fas fa-list-ul fa-1x footer-ico"></i>
+          <i class="col far fa-calendar-check fa-1x footer-ico"></i>
+        </div>
       </div>
     </footer>
   </body>
