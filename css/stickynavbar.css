@@ -23,29 +23,25 @@
     margin-top: 60px;
 }
 
+#dw-s1{
+    position: fixed;
+}
 
 .drawer-menu{
-    height: 100px;
  margin-left : auto;
  margin-right: auto;
 }
 
 .drawer-buttons{
-    position: relative;
-    width: 100%;
+    position: absolute;
     margin-left : auto;
     margin-right: auto;
-    bottom:0;
+    width: 100%;
+    bottom:5%;
+    text-align: center;
 }
 
 .drawer-button{
     width: 80%;
-    margin-left : auto;
-    margin-right: auto;
-    margin-top: 80%;
-    position: absolute;
 }
 
-#dw-s1{
-    position: fixed;
-}
