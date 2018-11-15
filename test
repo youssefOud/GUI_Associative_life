@@ -1,0 +1,36 @@
+<div class="bmd-layout-container bmd-drawer-f-l bmd-drawer-overlay">
+    <nav class="navbar">
+        <a class="navbar-brand">Fil d'actualité</a>
+        <form class="form-inline">
+            <a class="nav-item nav-link"  href="#"><i class="fas fa-search nav-ico"></i></a>
+            <a class="nav-item nav-link" href="#"><i class="fas fa-filter nav-ico"></i></a>
+            <a class="nav-item nav-link" href="#"><i class="fas fa-user nav-ico"></i></a>
+        </form>
+        
+    </nav>
+    <div id="dw-s2" class="bmd-layout-drawer bg-faded">
+      <header>
+        <a class="navbar-brand">Title</a>
+      </header>
+      <ul class="list-group">
+        <a class="list-group-item">Link 1</a>
+        <a class="list-group-item">Link 2</a>
+        <a class="list-group-item">Link 3</a>
+      </ul>
+    </div>
+  </div>
+
+
+  <header class="row">
+              <a class="navbar-brand">Bonjour Rémi !</a>
+            </header>
+            <div class="drawer-menu">
+              <ul class="list-group">
+                <a class="list-group-item"><i class="fas fa-user-circle fa-2x"></i>Mes infos</a>
+                <a class="list-group-item"><i class="fas fa-star fa-2x"></i>Mes favoris</a>
+                <a class="list-group-item"><i class="fas fa-envelope fa-2x"></i>Nous contacter</a>
+              </ul>
+            </div>
+            <div class="drawer-buttons">
+              <button type="button" class="row btn btn-outline-danger drawer-button">Déconnexion</button>
+            </div>
