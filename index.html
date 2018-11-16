@@ -8,8 +8,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
-    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-
     
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" crossorigin="anonymous">
@@ -22,7 +20,7 @@
       <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
           <header class="bmd-layout-header">
               <nav class="navbar">
-                  <a class="navbar-brand">Fil d'actualité</a>
+                  <a class="navbar-brand" id="pageTitle">Fil d'actualité</a>
                   <form class="form-inline">
                       <a class="nav-item nav-link"><i class="fas fa-search nav-ico"></i></a>
                       <a class="nav-item nav-link"><i class="fas fa-filter nav-ico"></i></a>
@@ -91,8 +89,8 @@
             <footer class="footer">
               <div class="container">
                 <div class="row">
-                  <i class="col far fa-newspaper fa-1x footer-ico-active" onclick="switchPage(0)"></i>
-                  <i class="col fas fa-list-ul fa-1x footer-ico" onclick="switchPage(1)"></i>
+                  <i class="col far fa-newspaper fa-1x footer-ico-active" onclick="switchPage(0)" id="newsFooterButton"></i>
+                  <i class="col fas fa-list-ul fa-1x footer-ico" onclick="switchPage(1)" id="assoListFooterButton"></i>
                   <i class="col far fa-calendar-check fa-1x footer-ico" data-toggle="drawer" data-target="#dw-s2" ></i>
                 </div>
               </div>
@@ -105,16 +103,27 @@
 </html>
 
 <script>
+  $(document).ready(function() { 
+    $('body').bootstrapMaterialDesign(); 
+    $("#assolistPage").hide();
+  });
+
   function switchPage(page){
     console.log(page);
     switch(page){
       case 0:
+        $("#pageTitle").text("Fil d'actualité");
         $("#newsPage").show();
         $("#assolistPage").hide();
+        $("#assoListFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
+        $("#newsFooterButton").addClass("footer-ico-active").removeClass("footer-ico");
         break;
       case 1:
+        $("#pageTitle").text("List d'assos");
         $("#newsPage").hide();
         $("#assolistPage").show();
+        $("#newsFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
+        $("#assoListFooterButton").addClass("footer-ico-active").removeClass("footer-ico");
         break;
       default:
         break;
