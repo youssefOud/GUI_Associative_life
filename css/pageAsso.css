@@ -1,0 +1,12 @@
+.tabs>a{
+    text-align: center;
+    line-height: var(--main-navheight);
+    margin-right: auto;
+    margin-left: auto;
+    background-color:  var(--main-grey);
+    border-right: 2px solid #fafafa;
+}
+#assoHomePage{
+    text-align: justify;
+    margin-top: 15px;
+}
