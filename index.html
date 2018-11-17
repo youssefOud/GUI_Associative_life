@@ -80,6 +80,18 @@
                   </div>
 
                   <div class="jumbotron asso">
+                    <img class="thumbnail" src="images/clubrock.png" />
+                    <div style="padding-right: 50px">
+                      <span class="titreAsso">Club Rock</span> <br/>
+                      <span class="categAsso">Arts et spectacles</span>
+                    </div>
+                    <button class="btn  btn-round-lg btn-lg fav" >
+                      <i class="far fa-star favStar" ></i>
+                      <span class="textFav">Favoris</span>
+                    </button>
+                  </div>
+
+                  <div class="jumbotron asso">
                     <img class="thumbnail" src="images/Cluji.png" />
                     <div style="padding-right: 120px;">
                       <span class="titreAsso">Cluji</span> <br/>
@@ -96,6 +108,18 @@
                     <div>
                       <span class="titreAsso">Cod'INSA</span> <br/>
                       <span class="categAsso">Technique et schientifique</span>
+                    </div>
+                    <button class="btn  btn-round-lg btn-lg fav"  >
+                      <i class="fas fa-star favStar" ></i>
+                      <span class="textFav">Favoris</span>
+                    </button>
+                  </div>
+
+                  <div class="jumbotron asso" >
+                    <img class="thumbnail" src="images/coil.png" />
+                    <div style="padding-right: 120px">
+                      <span class="titreAsso">COIL</span> <br/>
+                      <span class="categAsso">Loisir</span>
                     </div>
                     <button class="btn  btn-round-lg btn-lg fav"  >
                       <i class="fas fa-star favStar" ></i>
@@ -129,6 +153,18 @@
                   </div>
 
                   <div class="jumbotron asso" >
+                    <img class="thumbnail" src="images/indiaction.jpg" />
+                    <div style="padding-right: 30px">
+                      <span class="titreAsso">Indiaction</span> <br/>
+                      <span class="categAsso">Humanitaire et social</span>
+                    </div>
+                    <button class="btn  btn-round-lg btn-lg fav" >
+                      <i class="fas fa-star favStar" ></i>
+                      <span class="textFav">Favoris</span>
+                    </button>
+                  </div>
+
+                  <div class="jumbotron asso" >
                     <img class="thumbnail" src="images/larotonde.jpg" />
                     <div style="padding-right: 45px">
                       <span class="titreAsso">La Rotonde</span> <br/>
@@ -153,30 +189,6 @@
                   </div>
 
                   <div class="jumbotron asso" >
-                    <img class="thumbnail" src="images/objectif21.jpg" />
-                    <div style="padding-right: 30px">
-                      <span class="titreAsso">Objectif 21</span> <br/>
-                      <span class="categAsso">Humanitaire et social</span>
-                    </div>
-                    <button class="btn  btn-round-lg btn-lg fav" >
-                      <i class="far fa-star favStar" ></i>
-                      <span class="textFav">Favoris</span>
-                    </button>
-                  </div>
-
-                  <div class="jumbotron asso" >
-                    <img class="thumbnail" src="images/indiaction.jpg" />
-                    <div style="padding-right: 30px">
-                      <span class="titreAsso">Indiaction</span> <br/>
-                      <span class="categAsso">Humanitaire et social</span>
-                    </div>
-                    <button class="btn  btn-round-lg btn-lg fav" >
-                      <i class="fas fa-star favStar" ></i>
-                      <span class="textFav">Favoris</span>
-                    </button>
-                  </div>
-
-                  <div class="jumbotron asso" >
                     <img class="thumbnail" src="images/lezarts.png" />
                     <div style="padding-right: 30px">
                       <span class="titreAsso">Lezarts</span> <br/>
@@ -189,22 +201,10 @@
                   </div>
 
                   <div class="jumbotron asso" >
-                    <img class="thumbnail" src="images/coil.png" />
-                    <div style="padding-right: 120px">
-                      <span class="titreAsso">COIL</span> <br/>
-                      <span class="categAsso">Loisir</span>
-                    </div>
-                    <button class="btn  btn-round-lg btn-lg fav"  >
-                      <i class="fas fa-star favStar" ></i>
-                      <span class="textFav">Favoris</span>
-                    </button>
-                  </div>
-
-                  <div class="jumbotron asso">
-                    <img class="thumbnail" src="images/clubrock.png" />
-                    <div style="padding-right: 50px">
-                      <span class="titreAsso">Club Rock</span> <br/>
-                      <span class="categAsso">Arts et spectacles</span>
+                    <img class="thumbnail" src="images/objectif21.jpg" />
+                    <div style="padding-right: 30px">
+                      <span class="titreAsso">Objectif 21</span> <br/>
+                      <span class="categAsso">Humanitaire et social</span>
                     </div>
                     <button class="btn  btn-round-lg btn-lg fav" >
                       <i class="far fa-star favStar" ></i>
@@ -238,18 +238,21 @@
       </div>
 
 
+
   </body>
 </html>
 
 <script>
-$( ".fav" ).click(function(event) {
-  if(event.currentTarget.firstElementChild.classList[0]=="fas"){
-    event.currentTarget.firstElementChild.classList.replace("fas","far");
-  }
-  else{
-    event.currentTarget.firstElementChild.classList.replace("far","fas");
-  }
-});
+  $( ".fav" ).click(function(event) {
+    if(event.currentTarget.firstElementChild.classList[0]=="fas"){
+      event.currentTarget.firstElementChild.classList.replace("fas","far");
+    }
+    else{
+      event.currentTarget.firstElementChild.classList.replace("far","fas");
+    }
+    event.currentTarget.blur();
+  });
+
   function findParameter(parameterName) {
     var result = null,
         tmp = [];
