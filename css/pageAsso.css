@@ -1,4 +1,4 @@
-.tabs>a{
+.tabs > a {
     text-align: center;
     line-height: var(--main-navheight);
     margin-right: auto;
@@ -9,4 +9,26 @@
 #assoHomePage{
     text-align: justify;
     margin-top: 15px;
+}
+h3 {
+    font-size: var(--main-item-title-size);
+    font-family: var(--main-item-title-font);
+}
+.social-ico {
+    vertical-align: sub;
+}
+.facebook-ico {
+    color: var(--main-facebook);
+}
+.twitter-ico {
+    color: var(--main-twitter);
+}
+.instagram-ico {
+    color: var(--main-instagram);
+}
+.flickr-ico {
+    color: var(--main-flickr);
+}
+.youtube-ico {
+    color: var(--main-youtube);
 }
