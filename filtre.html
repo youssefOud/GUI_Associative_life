@@ -15,163 +15,99 @@
 
   </head>
   <body>
-    <h1>Hello, world!</h1>
-    <!-- TODO : Ajouter la navbar du haut -->
-
-    <!-- class=badge : remplacer ce qu'il y a l'intérieur pour mettre un bouton -->
-    <!--<ul class="list-group">
-      <li class="list-group-item"><div class="dropdown show">
-        <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Favoris<span class="badge">
-            <div class="checkbox">
-              <label><input type="checkbox" value="favoris"></label>
-
+      <!-- TODO : Ajouter la navbar du haut -->
+        <li class="list-group-item">Favoris
+          <span class="badge">
+            <div class="checkbox gros">
+              <div class="souscheck">
+              <input id="favoris" type="checkbox" checked="true" />
+              <label for="favoris"></label>
             </div>
           </span>
-        </a>
-
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">ETIC INSA
-              <div class="checkbox">
-                <label><input type="checkbox" value="eticinsa"></label>
-              </div>
-            </a>
-          <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">ETIC INSA
-              <div class="checkbox">
-                <label><input type="checkbox" value="tech"></label>
-              </div>
-            </a>
-          <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">ETIC INSA
-              <div class="checkbox">
-                <label><input type="checkbox" value="tech"></label>
-              </div>
-            </a>
-        </div>
-      </li>-->
-
-      <li class="list-group-item">Favoris
-        <span class="badge">
-          <div class="checkbox gros">
-            <div class="souscheck">
-            <input id="favoris" type="checkbox" />
-            <label for="favoris"></label>
-          </div>
-        </span>
-      </li>
-      <li class="list-group-item" id="parentTest1"><span id="test1">Animation du campus</span>
-        <span class="badge">
-          <i class="fa fa-chevron-down" id="chevron1" aria-hidden="true"></i>
-          <div class="checkbox gros">
-            <div class="souscheck">
-            <input id="caseAnim" type="checkbox" />
-            <label for="caseAnim"></label>
-          </div>
-        </span>
-      </li>
-
-      <li class="list-group-item" id="parentTest2"><span id="test2">Arts</span>
-        <span class="badge">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          <div class="checkbox gros">
-            <div class="souscheck">
-            <input id="caseArts" type="checkbox" />
-            <label for="caseArts"></label>
-          </div>
-        </span>
-      </li>
-      <li class="list-group-item">Culture
-        <span class="badge">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          <div class="checkbox gros">
-            <div class="souscheck">
-            <input id="choix2" type="checkbox" />
-            <label for="choix2"></label>
-          </div>
-        </span>
-      </li>
-      <li class="list-group-item">Département
-        <span class="badge">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          <div class="checkbox gros">
-            <div class="souscheck">
-            <input id="choix1" type="checkbox" />
-            <label for="choix1"></label>
-          </div>
-          </div>
-        </span>
-      </li>
-      <li class="list-group-item">Humanitaires et Social
-        <span class="badge">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          <div class="checkbox gros">
-            <div class="souscheck">
-            <input id="huma" type="checkbox" />
-            <label for="huma"></label>
-          </div>
-        </span>
-      </li>
-      <li class="list-group-item">Loisir
-        <span class="badge">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          <div class="checkbox gros">
-            <div class="souscheck">
-            <input id="loisir" type="checkbox" />
-            <label for="loisir"></label>
-          </div>
-        </span>
-      </li>
-      <li class="list-group-item">Sport
-        <span class="badge">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          <div class="checkbox gros">
-            <div class="souscheck">
-            <input id="sport" type="checkbox" />
-            <label for="sport"></label>
-          </div>
-        </span>
-      </li>
-      <li class="list-group-item">Technique et Scientifique
-        <span class="badge">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
-          <div class="checkbox gros">
-            <div class="souscheck">
-            <input id="tech" type="checkbox" />
-            <label for="tech"></label>
-          </div>
-        </span>
-      </li>
-
-    </ul>
-  </div>
-  <!--
-    <div class="dropdown show">
-      <a class="btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Favoris
-      </a>
-
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#">ETIC INSA
-            <div class="checkbox">
-              <label><input type="checkbox" value="eticinsa"></label>
+        </li>
+        <li class="list-group-item" id="parentTest1"><span class="chevron" id="test1">Animation du campus</span>
+          <span class="badge">
+            <i class="fa fa-chevron-down" id="chevron1" aria-hidden="true"></i>
+            <div class="checkbox gros">
+              <div class="souscheck">
+              <input class="cocher" id="caseTest1" type="checkbox" />
+              <label for="caseTest1"></label>
             </div>
-          </a>
-        <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">ETIC INSA
-            <div class="checkbox">
-              <label><input type="checkbox" value="tech"></label>
+          </span>
+        </li>
+        <li class="list-group-item" id="parentTest2"><span class="chevron" id="test2">Arts</span>
+          <span class="badge">
+            <i class="fa fa-chevron-down"id="chevron2" aria-hidden="true"></i>
+            <div class="checkbox gros">
+              <div class="souscheck">
+              <input class="cocher" id="caseTest2" type="checkbox" checked="true" />
+              <label for="caseTest2"></label>
             </div>
-          </a>
-        <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">ETIC INSA
-            <div class="checkbox">
-              <label><input type="checkbox" value="tech"></label>
+          </span>
+        </li>
+        <li class="list-group-item" id="parentTest3"><span class="chevron" id="test3">Culture</span>
+          <span class="badge">
+            <i class="fa fa-chevron-down" id="chevron3" aria-hidden="true"></i>
+            <div class="checkbox gros">
+              <div class="souscheck">
+              <input class="cocher" id="caseTest3" type="checkbox" />
+              <label for="caseTest3"></label>
             </div>
-          </a>
-      </div>
-    </div> -->
-
-<!-- TODO : Ajouter la navbar du bas -->
+          </span>
+        </li>
+        <li class="list-group-item" id="parentTest9"><span class="chevron" id="test9">Département</span>
+          <span class="badge">
+            <i class="fa fa-chevron-down" id="chevron9" aria-hidden="true"></i>
+            <div class="checkbox gros">
+              <div class="souscheck">
+              <input class="cocher" id="caseTest9" type="checkbox" />
+              <label for="caseTest9"></label>
+            </div>
+            </div>
+          </span>
+        </li>
+        <li class="list-group-item" id="parentTest4"><span class="chevron" id="test4">Humanitaires et Social</span>
+          <span class="badge">
+            <i class="fa fa-chevron-down" id="chevron4" aria-hidden="true"></i>
+            <div class="checkbox gros">
+              <div class="souscheck">
+              <input class="cocher" id="caseTest4" type="checkbox" />
+              <label for="caseTest4"></label>
+            </div>
+          </span>
+        </li>
+        <li class="list-group-item" id="parentTest5"><span class="chevron" id="test5">Loisir</span>
+          <span class="badge">
+            <i class="fa fa-chevron-down" id="chevron5" aria-hidden="true"></i>
+            <div class="checkbox gros">
+              <div class="souscheck">
+              <input class="cocher" id="caseTest5" type="checkbox" />
+              <label for="caseTest5"></label>
+            </div>
+          </span>
+        </li>
+        <li class="list-group-item" class="chevron" id="parentTest6">
+          <span class="chevron" id="test6">Sport</span>
+          <span class="badge">
+            <i class="fa fa-chevron-down" id="chevron6" aria-hidden="true"></i>
+            <div class="checkbox gros">
+              <div class="souscheck">
+              <input class="cocher" id="caseTest6" type="checkbox" />
+              <label for="caseTest6"></label>
+            </div>
+          </span>
+        </li>
+        <li class="list-group-item" id="parentTest7"><span class="chevron" id="test7">Technique et Scientifique
+          <span class="badge">
+            <i class="fa fa-chevron-down" id="chevron7" aria-hidden="true"></i>
+            <div class="checkbox gros">
+              <div class="souscheck">
+              <input class="cocher" id="caseTest7" type="checkbox" />
+              <label for="caseTest7"></label>
+            </div>
+          </span>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>

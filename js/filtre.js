@@ -2,141 +2,124 @@
 
 $(document).ready(function () {
 
-  $("#caseAnim").on('click', function() {
-        cocherAssos();
+  $("#favoris").on('click', function() {
+        cocherFavoris();
   });
-  $("#test1").on('click', function() {
-        changerSensChevron();
-        ajouterAssos();
+  $('#caseTest2').on('click', function() {
+        if ($('#caseTest2:not(:checked)').length !== 0) {
+          $('#favoris').prop('checked',false);
+        }
+        if ($('#bde5').length !== 0) {
+          $('#favoris').prop('checked',($('#bde5:not(:checked)').length == 0) && ($('#caseTest2:not(:checked)').length == 0));
+        }
   });
-  $("#test2").on('click', function() {
-        ajouterAssos2();
+  $('.cocher').on('click', function() {
+        var numParent = $(this).prop("id").charAt(8); // Pour récupérer le numéro de la catégorie
+        cocherAssosGenerique(numParent);
   });
+
+  $(".chevron").on('click', function() {
+        var numId = $(this).prop("id").charAt(4);
+        changerSensChevronGenerique(numId);
+        ajouterAssosGenerique(numId);
+  });
+
+
 });
 
-function changerSensChevron() {
-  if ($('#chevron1').attr("class") === "fa fa-chevron-up") {
-    $('#chevron1').toggleClass('fa-chevron-up', false).toggleClass('fa-chevron-down', true);
+function cocherFavoris() {
+  var fav1 = "#caseTest2"; // favoris centre d'interet
+  var fav2 = "#bde5"; // Favoris assos
+  var favCheck = '#favoris:not(:checked)';
+  if ($(fav2).length == 0 && $(favCheck).length == 0) {
+    changerSensChevronGenerique(5);
+    ajouterAssosGenerique(5);
+    $(fav2).prop('checked',($(favCheck).length == 0));
+  } else if ($(fav2).length !== 0){
+      $(fav2).prop('checked',($(favCheck).length == 0));
+  }
+  $(fav1).prop('checked',($(favCheck).length == 0));
+}
+
+function changerSensChevronGenerique(numId) {
+  var chevron = '#chevron' + numId;
+  if ($(chevron).attr("class") === "fa fa-chevron-up") {
+    $(chevron).toggleClass('fa-chevron-up', false).toggleClass('fa-chevron-down', true);
   } else {
-    $('#chevron1').toggleClass('fa-chevron-down', false).toggleClass('fa-chevron-up', true);
+    $(chevron).toggleClass('fa-chevron-down', false).toggleClass('fa-chevron-up', true);
   }
 }
 
-function cocherAssos() {
-  console.log($('.radioAsso').length !== 0);
-  console.log($('#caseAnim:not(:checked)').length);
-    if ($('.radioAsso').length !== 0) {
-      $('.radioAsso').prop('checked',($('#caseAnim:not(:checked)').length == 0));
+function cocherAssosGenerique(num) {
+    var radioAsso = '.radioAsso';
+    var balise = radioAsso + num;
+    var check = '#caseTest' + num + ':not(:checked)';
+    if ($(balise).length !== 0) {
+      $(balise).prop('checked',($(check).length == 0));
     }
 }
 
-function ajouterAssos () {
-  if ($('.assos').length == 0) {
-      $("#parentTest1").after('<li id = "assoArgil" class="list-group-item assos">ARGIL'
+function ajouterAssosGenerique (numId) {
+  var asso = ".assos" + numId;
+  var classAsso = "assos" + numId;
+  var radioAsso = "radioAsso" + numId;
+  var parentTest = "#parentTest" + numId;
+  if ($(asso).length == 0) {
+      $(parentTest).after('<li id="assoArgil' + numId + '" class="list-group-item ' + classAsso + '">ARGIL'
         + '<span class="badge">'
         +  '<div class="checkbox gros">'
-        +  '<input class="radioAsso" id="argil" type="checkbox" checked="false"/>'
-        + '<label for="argil"></label>'
+        +  '<input class="' + radioAsso + '" id="argil' +numId + '" type="checkbox" checked="false"/>'
+        + '<label for="argil' + numId + '"></label>'
         + '</div></span></li>'
-        + '<li class="list-group-item assos">BDE'
+        + '<li class="list-group-item '+ classAsso +'">BDE'
         + '<span class="badge">'
         +  '<div class="checkbox gros">'
-        +  '<input class="radioAsso" id="bde" type="checkbox" checked="false" />'
-        + '<label for="bde"></label>'
+        +  '<input class="' + radioAsso + '" id="bde'+ numId + '" type="checkbox" checked="false" />'
+        + '<label for="bde' + numId + '"></label>'
         + '</div></span></li>'
-        + '<li id="assoKleson" class="list-group-item assos">K-le Son'
+        + '<li id="assoKleson' + numId + '" class="list-group-item '+ classAsso +'">K-le Son'
         + '<span class="badge">'
         +  '<div class="checkbox gros">'
-        +  '<input class="radioAsso" id="kleson" type="checkbox" checked="false" />'
-        + '<label for="kleson"></label>'
+        +  '<input class="' + radioAsso +'" id="kleson' + numId +'" type="checkbox" checked="false" />'
+        + '<label for="kleson' + numId + '"></label>'
         + '</div></span></li>');
-        activerCss();
-        $('.radioAsso').attr('checked',($('#caseAnim:not(:checked)').length == 0));
-        $(".radioAsso").on('click', function() {
-              cocherCentreInteret();
+        activerCssGenerique(numId);
+        var casetest = "#caseTest" + numId + ":not(:checked)";
+        if ($('#bde5').length !== 0) {
+          $('#bde5').prop('checked',($('#favoris:not(:checked)').length == 0));
+        }
+        $('.' + radioAsso).attr('checked',($(casetest).length == 0));
+        $('.' + radioAsso).on('click', function() {
+              cocherCentreInteretGenerique(numId);
         });
     } else {
-        $('.assos').remove();
+        $(asso).remove();
     }
 }
 
-function ajouterAssos2 () {
-  $("#parentTest2").after('<li id = "assoBandas" class="list-group-item assos2">Band\'As'
-    + '<span class="badge">'
-    +  '<div class="checkbox">'
-    +   '<label><input class="radioAsso2" type="checkbox" value="bandas"></label>'
-    +  '</div></span></li>'
-    + '<li class="list-group-item assos2">Ensemble vocal INSA'
-    + '<span class="badge">'
-    +  '<div class="checkbox">'
-    +   '<label><input class="radioAsso2" type="checkbox" value="evi"></label>'
-    +  '</div></span></li>'
-    + '<li id="cgr" class="list-group-item assos2">CGR'
-    + '<span class="badge">'
-    +  '<div class="checkbox">'
-    +    '<label><input class="radioAsso2" type="checkbox" value="cgr"></label>'
-    +  '</div></span></li>');
-    activerCss2();
-    $(".radioAsso2").on('click', function() {
-          cocherCentreInteret2();
+function cocherCentreInteretGenerique(numId) {
+    var radioAsso = ".radioAsso" + numId;
+    var caseTest = "#caseTest" + numId;
+    $(radioAsso).click(function() {
+      $(caseTest).prop('checked',($(radioAsso + ':not(:checked)').length == 0));
+
     });
-    $("#test2").on('click', function() {
-          retirerAssos2();
-    });
+    if ($('#bde5').length !== 0) {
+      $('#favoris').prop('checked',($('#bde5:not(:checked)').length == 0) && ($('#caseTest2:not(:checked)').length == 0));
+    }
 }
 
-function cocherCentreInteret() {
-    $('.radioAsso').click(function() {
-      $('#caseAnim').prop('checked',($('.radioAsso:not(:checked)').length == 0));
-    });
-}
-
-function cocherCentreInteret2() {
-    $('.radioAsso2').click(function() {
-      $('#caseArts').prop('checked',($('.radioAsso2:not(:checked)').length == 0));
-    });
-}
-//TODO : Couleur, intégrer navbar, changer couleur checkbox, si possible intégrer icone de la fleche
-
-function retirerAssos() {
-    $('.assos').remove();
-    $("#caseAnim").on('click', function() {
-      cocherAssos();
-    });
-    $("#test1").on('click', function() {
-          ajouterAssos()
-    });
-}
-
-function retirerAssos2() {
-    $('.assos2').remove();
-    $("#test2").on('click', function() {
-          ajouterAssos2()
-    });
-}
-
-function activerCss() {
-  $('.assos').css('text-align', 'left');
-  $('.assos').css('height', '40px');
-  $('.assos').css('padding-left', '2.375rem');
-  $('.assos').css('padding-bottom', '1rem');
-  $('.assos').css('padding-top', '0.5rem');
-  $('.assos').css('margin-top', '0.175rem');
-  $('.assos').css('margin-bottom', '0.175rem');
-  $('#assoArgil').css('margin-top', '0rem');
-  $('#parentTest1').css('margin-bottom', '0rem');
-  $('#assoKleson').css('margin-bottom', '0.450rem');
-}
-
-function activerCss2() {
-  $('.assos2').css('text-align', 'left');
-  $('.assos2').css('height', '40px');
-  $('.assos2').css('padding-left', '2.375rem');
-  $('.assos2').css('padding-bottom', '1rem');
-  $('.assos2').css('padding-top', '0.5rem');
-  $('.assos2').css('margin-top', '0.175rem');
-  $('.assos2').css('margin-bottom', '0.175rem');
-  $('#assoBandas').css('margin-top', '0rem');
-  $('#parentTest2').css('margin-bottom', '0rem');
-  $('#cgr').css('margin-bottom', '0.450rem');
+function activerCssGenerique(numId) {
+  var asso = ".assos" + numId;
+  $(asso).css('text-align', 'left');
+  $(asso).css('height', '40px');
+  $(asso).css('padding-left', '2.375rem');
+  $(asso).css('padding-bottom', '1rem');
+  $(asso).css('padding-top', '0.5rem');
+  $(asso).css('margin-top', '0.175rem');
+  $(asso).css('margin-bottom', '0.175rem');
+  $(asso).css('background-color','#F7F7F7');
+  $('#assoArgil' + numId).css('margin-top', '0rem');
+  $('#parentTest' + numId).css('margin-bottom', '0rem');
+  $('#assoKleson' + numId).css('margin-bottom', '0.450rem');
 }
