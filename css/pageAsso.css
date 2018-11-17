@@ -42,7 +42,7 @@ h3 {
     object-fit: cover;
     border: solid var(--main-white);
 }
-#wrapper {
+.html-full-img, .body-full-img, #wrapper {
    height:100%;
    width: 100%;
    margin: 0;

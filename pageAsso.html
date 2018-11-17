@@ -144,6 +144,8 @@
     function showimg(img){
             $("#pageAsso").hide();
             $(".full-img").find("img").attr("src",img.getAttribute("src"));
+            $("html").addClass("html-full-img");
+            $("body").addClass("body-full-img");
             $(".full-img").show();
     }
     function switchPage(page){
