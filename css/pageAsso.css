@@ -6,7 +6,8 @@
     background-color:  var(--main-grey);
     border-right: 2px solid #fafafa;
 }
-#assoHomePage-content{
+#assoHomePage-content,
+.list-item-content{
     text-align: justify;
     margin-top: 15px;
 }
@@ -53,4 +54,37 @@ h3 {
    vertical-align: middle;
    text-align: center;
    background-color: black;
+}
+.list-item-header {
+    display:flex;
+    flex-direction: row;
+    padding:15px;
+}
+.list-item {
+    align-items: center;
+    background-color: var(--main-grey);
+    margin-top: 4px;
+    border-radius: 0;
+    color: var(--main-item-content-color);
+}
+.list-item-header > img {
+    height:50px;
+    width:50px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+.item-title {
+    color: var(--main-item-title-color);
+    font-size: var(--main-item-title-size);
+    font-family: var(--main-item-title-font);
+}
+.item-date {
+    color: var(--main-item-date-color);
+    font-size: var(--main-item-date-size);
+    font-weight: var(--main-item-date-weight);
+    font-family: var(--main-item-date-font);
+}
+
+.fa-angle-left{
+    vertical-align: middle;
 }

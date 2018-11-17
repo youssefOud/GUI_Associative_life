@@ -17,16 +17,17 @@
     <link href="css/stickynavbar.css" rel="stylesheet">
     <link href="css/pageAsso.css" rel="stylesheet">
     <link rel="stylesheet" href="css/fontcodes.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
   </head>
 
   <body>
         <div id="pageAsso" class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
             <header class="bmd-layout-header">
                 <nav class="navbar">
-                    <a class="nav-item nav-link return-link"><i class="fas fa-arrow-left"></i></a>
+                    <a class="nav-item nav-link return-link" onclick="switchPage(5)"><i class="fas fa-angle-left fa-2x"></i></a>
                     <a class="navbar-brand">TEDxINSA</a>
                     <form class="form-inline">
-                        <a class="nav-item nav-link star-link"><i class="far fa-star"></i></a>
+                        <a class="nav-item nav-link star-link" onclick="toggleFavoris()"><i id="starFavoris" class="far fa-star"></i></a>
                     </form>
                 </nav>
             </header>
@@ -96,7 +97,21 @@
 
                 <!-- ******************************** CONTENT NewsPage ******************************** -->
                 <div id="assoNewsPage" style="display: none;">
-
+                    <div class="list-item">
+                        <div class="list-item-header">
+                            <img src="images/TEDxINSA/TEDx.png"/>
+                            <div style="padding-right: 40px;">
+                                <span class="item-title">TEDxINSA</span> <br/>
+                                <span class="item-date">2 octobre 2018 à 15:21</span>
+                            </div>
+                        </div>
+                        <img src="images\TEDxINSA\TEDxINSA_Couverture.png" class="img-fluid" alt="Responsive image">
+                        <div class="container">
+                            <p class="list-item-content">
+                                Venez soutenir les talents de l'INSA au concours speaker.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- ******************************** CONTENT PhotosPage ******************************** -->
@@ -128,7 +143,7 @@
         <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay full-img" style="display: none;">
             <header class="bmd-layout-header">
                 <nav class="navbar" style="background-color: black;">
-                    <a class="nav-item nav-link return-link"><i class="fas fa-arrow-left"></i></a>
+                    <a class="nav-item nav-link return-link" onclick="returnimg()"><i class="fas fa-angle-left fa-2x"></i></a>
                 </nav>
             </header>
             <table id="wrapper">
@@ -144,10 +159,28 @@
     function showimg(img){
             $("#pageAsso").hide();
             $(".full-img").find("img").attr("src",img.getAttribute("src"));
-            $("html").addClass("html-full-img");
+            $("html").addClass("html-full-img"); //TODO Retirer ces deux classes lors du retour
             $("body").addClass("body-full-img");
             $(".full-img").show();
     }
+
+    function returnimg(){
+            $(".full-img").hide();
+            $("html").removeClass("html-full-img");
+            $("body").removeClass("body-full-img");
+            $("#pageAsso").show();
+    }
+
+    function toggleFavoris(){
+        if($("#starFavoris").hasClass("far")){
+            $("#starFavoris").addClass("fas");
+            $("#starFavoris").removeClass("far");
+        }else{
+           $("#starFavoris").addClass("far");
+           $("#starFavoris").removeClass("fas");
+        }
+    }
+
     function switchPage(page){
         switch(page){
             case 0: //fil d'actu
@@ -173,6 +206,12 @@
                 $("#assoHomePage").hide();
                 $(".navbar-brand").html("Photos");
                 $("#assoPhotosPage").show();
+                break;
+            case 5: //Home
+                $("#assoNewsPage").hide();
+                $("#assoPhotosPage").hide();
+                $(".navbar-brand").html("TEDxINSA");
+                $("#assoHomePage").show();
                 break;
             default:
                 break;
