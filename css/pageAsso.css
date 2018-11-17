@@ -6,7 +6,7 @@
     background-color:  var(--main-grey);
     border-right: 2px solid #fafafa;
 }
-#assoHomePage{
+#assoHomePage-content{
     text-align: justify;
     margin-top: 15px;
 }
@@ -31,4 +31,26 @@ h3 {
 }
 .youtube-ico {
     color: var(--main-youtube);
+}
+.navbar-brand {
+    font-size: var(--main-section-title-size);
+    font-family: var(--main-section-title-font);
+}
+.thumbnail-img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border: solid var(--main-white);
+}
+html, body, #wrapper {
+   height:100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+#wrapper td {
+   vertical-align: middle;
+   text-align: center;
+   background-color: black;
 }

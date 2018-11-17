@@ -10,7 +10,6 @@
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
 
-
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" crossorigin="anonymous">
     <link href="css/colorcodes.css" rel="stylesheet">
@@ -21,136 +20,161 @@
   </head>
 
   <body>
-      <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
-          <header class="bmd-layout-header">
-              <nav class="navbar">
-                  <a class="nav-item nav-link"><i class="fas fa-arrow-left"></i></a>
-                  <a class="navbar-brand">TEDxINSA</a>
-                  <form class="form-inline">
-                      <a class="nav-item nav-link"><i class="far fa-star"></i></a>
-                  </form>
-              </nav>
-          </header>
-          <main class="bmd-layout-content">
-            <!--CONTENT ******************************** -->
-            <img src="images\TEDxINSA_Couverture.png" class="img-fluid" alt="Responsive image">
-            <div class="row tabs">
-                <a class="col" >NEWS</a>
-                <a class="col" >PHOTOS</a>
-            </div>
-            <div class="container" id="assoHomePage">
-                <p>
-                    TEDxINSA à pour but d'organiser un événement similaire aux <b>conférences TED</b> afin de partager des idées pour changer le monde ! Sous une licence délivrée par TED nous mettons en place <b>une après midi de conférence</b>, rassemblons des speakers des quatre coins de la France (voir du monde ;) ) pour partager leur expérience avec des centaines de spectateurs.</p>
-                <p>
-                    TEDxINSA s'articule autour de <b>différents pôles</b>, <b>communication</b>, <b>sponsors</b> (ce qui finance notre événement), <b>speakers</b> (ce qui nous permet d'avoir les meilleurs conférenciers), <b>technique</b> (afin de permettre aux absents de nous retrouver sur un live), <b>logistique</b> (pour une dégustation digne des plus grands), <b>animation</b> (afin de divertir nos spectateurs entre deux conférences).
-                </p>
-                <h3>Description des postes</h3>
-                <p>
-                    <b>Présidente :</b> Emilie Borghino <br>
-                    <b>Vice-Président :</b> Salim Hafid<br>
-                    <b>Trésorier :</b> Corentin Giral<br>
-                    <b>Secrétaire :</b> Agathe Liguori<br>
-                    <b>Responables de pôles :</b> ...<br>
-                    <b>Membre de pôle :</b> ...
-                </p>
-                <h3>Fonctionnement Interne</h3>
-                <p>
-                    A TEDxINSA, chaque pôle à <b>2 co-responsables</b>, ces personnes sont chargée de <b>guider l'équipe</b> dont elle ont la charge et de vérifier que les deadlines sont bien respectées.<br>
-                    Les pôles ont chacun <b>3 à 7 membres</b> et organisent leur réunions comme il leur semble (nous conseillons une <b>réunion hebdomadaire de 1h</b>).<br>
-                    Les responsanbles de pôles n'ont qu'une réunion supplémentaire, la <b>réunion du Conseil Administratif</b> (Bureau + Responsables) qui est également <b>1h hebdomadaire</b>.
-                </p>
-                <h3>Pour nous trouver</h3>
-                <p>
-                    <b>Local :</b> Numéro 13 Batiment B (côté cimetière) <br>
-                    <i class="fas fa-envelope fa-1x"></i> <u>contact@tedxinsa.com</u> <br>
-                    <i class="fas fa-phone fa-1x"></i> 06.05.12.48.75 <br>
-                    <div class="row">
-                        <div class=" col">
-                            <a href="https://facebook.com/tedxinsa">
-                                <i class="fab fa-facebook-square fa-2x social-ico facebook-ico"></i>
-                                /tedxinsa
-                            </a><br>
-                            <a href="https://www.instagram.com/tedxinsa/">
-                                <i class="fab fa-instagram fa-2x social-ico instagram-ico"></i>
-                                /tedxinsa
-                            </a><br>
-                            <a href="https://twitter.com/tedxinsa">
-                                <i class="fab fa-twitter-square fa-2x social-ico twitter-ico" ></i>
-                                @tedxinsa
-                            </a> <br>
-                        </div>
-                        <div class=" col">
-                            <a href="https://www.flickr.com/photos/tedxinsa">
-                                <i class="fab fa-flickr fa-2x social-ico flickr-ico"></i>
-                                /tedxinsa
-                            </a> <br>
-                            <a href="https://www.youtube.com/results?search_query=tedxinsa">
-                                <i class="fab fa-youtube-square fa-2x social-ico youtube-ico"></i>
-                                /tedxinsa
-                            </a> <br>
-                        </div>
+        <div id="pageAsso" class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
+            <header class="bmd-layout-header">
+                <nav class="navbar">
+                    <a class="nav-item nav-link return-link"><i class="fas fa-arrow-left"></i></a>
+                    <a class="navbar-brand">TEDxINSA</a>
+                    <form class="form-inline">
+                        <a class="nav-item nav-link star-link"><i class="far fa-star"></i></a>
+                    </form>
+                </nav>
+            </header>
+            <main class="bmd-layout-content">
+                <!-- ******************************** CONTENT HomePage ******************************** -->
+                <div id="assoHomePage" >
+                    <img src="images\TEDxINSA\TEDxINSA_Couverture.png" class="img-fluid" alt="Responsive image">
+                    <div class="row tabs">
+                        <a class="col" onclick="switchPage(3)">NEWS</a>
+                        <a class="col" onclick="switchPage(4)">PHOTOS</a>
                     </div>
-                </p>
-            </div>
-
-          <!--  <div class="container" id="assolistPage">
-                <div>
-                    <div class="jumbotron" style="display:flex;flex-direction: row;justify-content: space-around;">
-                      <img src="images/lamouette.png" style="height:50px;width:50px"/>
-                      <div>
-                        <span style="color:#676767; font-family:'Roboto',sans-serif; font-size: 20px;">AJIL</span> <br/>
-                        <span style="color:#676767; font-family:'Roboto',sans-serif; font-weight:100; font-size: 15px;">2 octobre 2018</span>
-                      </div>
-                      <button class="btn btn-primary btn-round-lg btn-lg" style="background-color:#FCFCFC;border:2px solid #E9E9E9;align-self:flex-end"  >
-                        <i class="fas fa-star" style="color:#D6180A"></i>
-                        <span style="color:black; font-family:'Roboto',sans-serif; font-size: 18px;">Favoris</span>
-                      </button>
-                    </div>
-                    <div class="jumbotron" style="display:flex;flex-direction: row;justify-content: space-around;">
-                      <img src="images/lamouette.png" style="height:50px;width:50px"/>
-                      <div>
-                        <span style="color:#676767; font-family:'Roboto',sans-serif; font-size: 20px;">AJIL</span> <br/>
-                        <span style="color:#676767; font-family:'Roboto',sans-serif; font-weight:100; font-size: 15px;">2 octobre 2018</span>
-                      </div>
-                      <button class="btn btn-primary btn-round-lg btn-lg" style="background-color:#FCFCFC;border:2px solid #E9E9E9;align-self:flex-end"  >
-                        <i class="fas fa-star" style="color:#D6180A"></i>
-                        <span style="color:black; font-family:'Roboto',sans-serif; font-size: 18px;">Favoris</span>
-                      </button>
+                    <div class="container" id="assoHomePage-content">
+                        <p>
+                            TEDxINSA à pour but d'organiser un événement similaire aux <b>conférences TED</b> afin de partager des idées pour changer le monde ! Sous une licence délivrée par TED nous mettons en place <b>une après midi de conférence</b>, rassemblons des speakers des quatre coins de la France (voir du monde ;) ) pour partager leur expérience avec des centaines de spectateurs.</p>
+                        <p>
+                            TEDxINSA s'articule autour de <b>différents pôles</b>, <b>communication</b>, <b>sponsors</b> (ce qui finance notre événement), <b>speakers</b> (ce qui nous permet d'avoir les meilleurs conférenciers), <b>technique</b> (afin de permettre aux absents de nous retrouver sur un live), <b>logistique</b> (pour une dégustation digne des plus grands), <b>animation</b> (afin de divertir nos spectateurs entre deux conférences).
+                        </p>
+                        <h3>Description des postes</h3>
+                        <p>
+                            <b>Présidente :</b> Emilie Borghino <br>
+                            <b>Vice-Président :</b> Salim Hafid<br>
+                            <b>Trésorier :</b> Corentin Giral<br>
+                            <b>Secrétaire :</b> Agathe Liguori<br>
+                            <b>Responables de pôles :</b> ...<br>
+                            <b>Membre de pôle :</b> ...
+                        </p>
+                        <h3>Fonctionnement Interne</h3>
+                        <p>
+                            A TEDxINSA, chaque pôle à <b>2 co-responsables</b>, ces personnes sont chargée de <b>guider l'équipe</b> dont elle ont la charge et de vérifier que les deadlines sont bien respectées.<br>
+                            Les pôles ont chacun <b>3 à 7 membres</b> et organisent leur réunions comme il leur semble (nous conseillons une <b>réunion hebdomadaire de 1h</b>).<br>
+                            Les responsanbles de pôles n'ont qu'une réunion supplémentaire, la <b>réunion du Conseil Administratif</b> (Bureau + Responsables) qui est également <b>1h hebdomadaire</b>.
+                        </p>
+                        <h3>Pour nous trouver</h3>
+                        <p>
+                            <b>Local :</b> Numéro 13 Batiment B (côté cimetière) <br>
+                            <i class="fas fa-envelope fa-1x"></i> <u>contact@tedxinsa.com</u> <br>
+                            <i class="fas fa-phone fa-1x"></i> 06.05.12.48.75 <br>
+                        </p>
+                        <div class="row">
+                            <div class=" col">
+                                <a href="https://facebook.com/tedxinsa">
+                                    <i class="fab fa-facebook-square fa-2x social-ico facebook-ico"></i>
+                                    /tedxinsa
+                                </a><br>
+                                <a href="https://www.instagram.com/tedxinsa/">
+                                    <i class="fab fa-instagram fa-2x social-ico instagram-ico"></i>
+                                    /tedxinsa
+                                </a><br>
+                                <a href="https://twitter.com/tedxinsa">
+                                    <i class="fab fa-twitter-square fa-2x social-ico twitter-ico" ></i>
+                                    @tedxinsa
+                                </a> <br>
+                            </div>
+                            <div class=" col">
+                                <a href="https://www.flickr.com/photos/tedxinsa">
+                                    <i class="fab fa-flickr fa-2x social-ico flickr-ico"></i>
+                                    /tedxinsa
+                                </a> <br>
+                                <a href="https://www.youtube.com/results?search_query=tedxinsa">
+                                    <i class="fab fa-youtube-square fa-2x social-ico youtube-ico"></i>
+                                    /tedxinsa
+                                </a> <br>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div> -->
 
-            <footer class="footer">
-              <div class="container">
-                <div class="row">
-                  <i class="col far fa-newspaper fa-1x footer-ico" onclick="switchPage(0)"></i>
-                  <i class="col fas fa-list-ul fa-1x footer-ico" onclick="switchPage(1)"></i>
-                  <i class="col far fa-calendar-check fa-1x footer-ico" data-toggle="drawer" data-target="#dw-s2" ></i>
+                <!-- ******************************** CONTENT NewsPage ******************************** -->
+                <div id="assoNewsPage" style="display: none;">
+
                 </div>
-              </div>
-            </footer>
-          </main>
-      </div>
 
+                <!-- ******************************** CONTENT PhotosPage ******************************** -->
+                <div id="assoPhotosPage" style="display: none;">
+                    <img src="images\TEDxINSA\IMG_0246.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\TEDxINSA\IMG_0063.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\TEDxINSA\IMG_0650.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\TEDxINSA\IMG_0322.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\TEDxINSA\IMG_0639.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\TEDxINSA\IMG_0648.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\TEDxINSA\IMG_0658.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\TEDxINSA\IMG_0832.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\TEDxINSA\IMG_0843.png" class="rounded float-right thumbnail-img" onclick="showimg(this)">
+                    <img src="images\TEDxINSA\IMG_0848.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                </div>
 
+                <footer class="footer">
+                    <div class="container">
+                        <div class="row">
+                            <i class="col far fa-newspaper fa-1x footer-ico" onclick="switchPage(0)"></i>
+                            <i class="col fas fa-list-ul fa-1x footer-ico" onclick="switchPage(1)"></i>
+                            <i class="col far fa-calendar-check fa-1x footer-ico" data-toggle="drawer" data-target="#dw-s2" onclick="switchPage(2)"></i>
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+
+        <div class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay full-img" style="display: none;">
+            <header class="bmd-layout-header">
+                <nav class="navbar" style="background-color: black;">
+                    <a class="nav-item nav-link return-link"><i class="fas fa-arrow-left"></i></a>
+                </nav>
+            </header>
+            <table id="wrapper">
+                <tr>
+                    <td><img src="" class="img-fluid"></td>
+                </tr>
+            </table>
+        </div>
   </body>
 </html>
 
 <script>
-  function switchPage(page){
-    console.log(page);
-    switch(page){
-      case 0:
-        $("#newsPage").show();
-        $("#assolistPage").hide();
-        break;
-      case 1:
-        $("#newsPage").hide();
-        $("#assolistPage").show();
-        break;
-      default:
-        break;
+    function showimg(img){
+        console.log(img.getAttribute("src"));
+            $("#pageAsso").hide();
+            $(".full-img").find("img").attr("src",img.getAttribute("src"));
+            $(".full-img").show();
     }
-
+    function switchPage(page){
+        switch(page){
+            case 0: //fil d'actu
+                $("#newsPage").show();
+                $("#assolistPage").hide();
+                break;
+            case 1: //liste
+                $("#newsPage").hide();
+                $("#assolistPage").show();
+                break;
+            case 2: //calendar
+                //$("#newsPage").hide();
+                //$("#assolistPage").show();
+                break;
+            case 3: //news
+                $("#assoHomePage").hide();
+                $("#assoPhotosPage").hide();
+                $(".navbar-brand").html("News");
+                $("#assoNewsPage").show();
+                break;
+            case 4: //photos
+                $("#assoNewsPage").hide();
+                $("#assoHomePage").hide();
+                $(".navbar-brand").html("Photos");
+                $("#assoPhotosPage").show();
+                break;
+            default:
+                break;
+    }
   }
 </script>
