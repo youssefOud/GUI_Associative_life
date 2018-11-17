@@ -28,7 +28,7 @@
                   <a class="navbar-brand" id="pageTitle">Fil d'actualité</a>
                   <form class="form-inline">
                       <a class="nav-item nav-link"><i class="fas fa-search nav-ico"></i></a>
-                      <a class="nav-item nav-link"><i class="fas fa-filter nav-ico"></i></a>
+                      <a class="nav-item nav-link" href="filtre.html"><i class="fas fa-filter nav-ico"></i></a>
                       <a class="nav-item nav-link" data-toggle="drawer" data-target="#dw-s1"><i class="fas fa-user nav-ico"></i></a>
                   </form>
               </nav>
@@ -64,7 +64,7 @@
                 </p>
             </div>
             <!-- LISTE ASSO CONTENT ******************************** -->
-            <div  id="assolistPage">
+            <div id="assolistPage">
                   <div class="jumbotron" style="display:flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#E9E9E9;margin-top: 4px; padding:10px">
                     <img src="images/ajil.png" style="height:50px;width:50px;"/>
                     <div style="padding-right: 40px;">
@@ -180,9 +180,31 @@
 </html>
 
 <script>
+  function findParameter(parameterName) {
+    var result = null,
+        tmp = [];
+    location.search
+        .substr(1)
+        .split("&")
+        .forEach(function (item) {
+          tmp = item.split("=");
+          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+        });
+    return result;
+  }
+
   $(document).ready(function() { 
     $('body').bootstrapMaterialDesign(); 
-    $("#assolistPage").hide();
+    var param = findParameter("page");
+    console.log(param);
+    switch(parseInt(param, 10)){
+      case 1:
+        switchPage(1);
+        break;
+      default:
+        switchPage(0);
+        break; 
+    }
   });
 
   function switchPage(page){
