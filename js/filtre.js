@@ -5,6 +5,14 @@ $(document).ready(function () {
   $("#favoris").on('click', function() {
         cocherFavoris();
   });
+  $('#caseTest2').on('click', function() {
+        if ($('#caseTest2:not(:checked)').length !== 0) {
+          $('#favoris').prop('checked',false);
+        }
+        if ($('#bde5').length !== 0) {
+          $('#favoris').prop('checked',($('#bde5:not(:checked)').length == 0) && ($('#caseTest2:not(:checked)').length == 0));
+        }
+  });
   $('.cocher').on('click', function() {
         var numParent = $(this).prop("id").charAt(8); // Pour récupérer le numéro de la catégorie
         cocherAssosGenerique(numParent);
@@ -94,7 +102,11 @@ function cocherCentreInteretGenerique(numId) {
     var caseTest = "#caseTest" + numId;
     $(radioAsso).click(function() {
       $(caseTest).prop('checked',($(radioAsso + ':not(:checked)').length == 0));
+
     });
+    if ($('#bde5').length !== 0) {
+      $('#favoris').prop('checked',($('#bde5:not(:checked)').length == 0) && ($('#caseTest2:not(:checked)').length == 0));
+    }
 }
 
 function activerCssGenerique(numId) {
