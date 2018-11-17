@@ -98,7 +98,7 @@ h3 {
     font-family: var(--main-smallbutton-text-font);
     font-size: var(--main-smallbutton-text-size);
 }
-.btn-round-lg{
+.btn-round-lg {
   border-radius : 22.5px;
   background-color: var(--main-lightgrey);
   text-transform: none;

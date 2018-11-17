@@ -27,7 +27,7 @@
                     <a class="nav-item nav-link return-link" onclick="switchPage(5)"><i class="fas fa-angle-left fa-2x"></i></a>
                     <a class="navbar-brand">TEDxINSA</a>
                     <form class="form-inline">
-                        <a class="nav-item nav-link star-link" onclick="toggleFavoris()"><i id="starFavoris" class="far fa-star"></i></a>
+                        <a class="nav-item nav-link star-link"><i class="far fa-star"></i></a>
                     </form>
                 </nav>
             </header>
@@ -206,9 +206,9 @@
                 <footer class="footer">
                     <div class="container">
                         <div class="row">
-                            <i class="col far fa-newspaper fa-1x footer-ico" onclick="switchPage(0)"></i>
-                            <i class="col fas fa-list-ul fa-1x footer-ico" onclick="switchPage(1)"></i>
-                            <i class="col far fa-calendar-check fa-1x footer-ico" data-toggle="drawer" data-target="#dw-s2" onclick="switchPage(2)"></i>
+                            <i class="col far fa-newspaper fa-lg footer-ico" onclick="switchPage(0)"></i>
+                            <i class="col fas fa-list-ul fa-lg footer-ico" onclick="switchPage(1)"></i>
+                            <i class="col far fa-calendar-check fa-lg footer-ico" data-toggle="drawer" data-target="#dw-s2" onclick="switchPage(2)"></i>
                         </div>
                     </div>
                 </footer>
@@ -244,16 +244,6 @@
             $("html").removeClass("html-full-img");
             $("body").removeClass("body-full-img");
             $("#pageAsso").show();
-    }
-
-    function toggleFavoris(){
-        if($("#starFavoris").hasClass("far")){
-            $("#starFavoris").addClass("fas");
-            $("#starFavoris").removeClass("far");
-        }else{
-           $("#starFavoris").addClass("far");
-           $("#starFavoris").removeClass("fas");
-        }
     }
 
     function switchPage(page){
