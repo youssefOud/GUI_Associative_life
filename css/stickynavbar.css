@@ -1,4 +1,6 @@
 .navbar{
+    top:0;
+    z-index:10;
     position: fixed;
     width: 100%;
     height: var(--main-navheight); /* Set the fixed height of the footer here */
