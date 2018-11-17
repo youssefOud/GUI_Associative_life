@@ -27,7 +27,7 @@
                     <a class="nav-item nav-link return-link" onclick="switchPage(5)"><i class="fas fa-angle-left fa-2x"></i></a>
                     <a class="navbar-brand">TEDxINSA</a>
                     <form class="form-inline">
-                        <a class="nav-item nav-link star-link" onclick="toggleFavoris()"><i id="starFavoris" class="far fa-star"></i></a>
+                        <a class="nav-item nav-link star-link"><i class="far fa-star fa-lg"></i></a>
                     </form>
                 </nav>
             </header>
@@ -102,7 +102,7 @@
                             <img src="images/TEDxINSA/TEDx.png"/>
                             <div style="padding-right: 40px;">
                                 <span class="item-title">TEDxINSA</span> <br/>
-                                <span class="item-date">2 octobre 2018 à 15:21</span>
+                                <span class="item-date">15 octobre 2018 à 15:21</span>
                             </div>
                         </div>
                         <img src="images\TEDxINSA\TEDxINSA_Couverture.png" class="img-fluid" alt="Responsive image">
@@ -110,6 +110,81 @@
                             <p class="list-item-content">
                                 Venez soutenir les talents de l'INSA au concours speaker.
                             </p>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-round-lg ">
+                                      <i class="far fa-calendar-alt fa-lg red-icon"></i>
+                                      <span>1er Mars 2018</span>
+                                    </button>
+                                    <button class="btn btn-round-lg ">
+                                      <i class="fas fa-map-marker-alt fa-lg red-icon"></i>
+                                      <span>Gaston Berger</span>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-round-lg ">
+                                      <i class="far fa-clock fa-lg red-icon"></i>
+                                      <span>19h30 - 21h30</span>
+                                    </button>
+                                    <button class="btn btn-round-lg ">
+                                      <i class="fas fa-euro-sign fa-lg red-icon"></i>
+                                      <span>Gratuit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="list-item-header">
+                            <img src="images/TEDxINSA/TEDx.png"/>
+                            <div style="padding-right: 40px;">
+                                <span class="item-title">TEDxINSA</span> <br/>
+                                <span class="item-date">5 octobre 2018 à 20:37</span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <p class="list-item-content">
+                                Merci à tous d'être venus à notre AG de recrutement. On vous attend nombreux lors de nos prochains évènements !
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="list-item">
+                        <div class="list-item-header">
+                            <img src="images/TEDxINSA/TEDx.png"/>
+                            <div style="padding-right: 40px;">
+                                <span class="item-title">TEDxINSA</span> <br/>
+                                <span class="item-date">25 septembre 2018 à 14:21</span>
+                            </div>
+                        </div>
+                        <img src="images\TEDxINSA\AGRecrutement.png" class="img-fluid" alt="Responsive image">
+                        <div class="container">
+                            <p class="list-item-content">
+                                On vous attend nombreux à l'AG de Recrutement TEDxINSA ! Avec tous nos pôle vous trouverez forcement une place pour vous avec nous !
+                            </p>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-round-lg ">
+                                      <i class="far fa-calendar-alt fa-lg red-icon"></i>
+                                      <span>3 Mars 2018</span>
+                                    </button>
+                                    <button class="btn btn-round-lg ">
+                                      <i class="fas fa-map-marker-alt fa-lg red-icon"></i>
+                                      <span>Salle 335 en IF</span>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-round-lg ">
+                                      <i class="far fa-clock fa-lg red-icon"></i>
+                                      <span>18h30 - 20h00</span>
+                                    </button>
+                                    <button class="btn btn-round-lg ">
+                                      <i class="fas fa-euro-sign fa-lg red-icon"></i>
+                                      <span>Gratuit</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -131,9 +206,9 @@
                 <footer class="footer">
                     <div class="container">
                         <div class="row">
-                            <i class="col far fa-newspaper fa-1x footer-ico" onclick="switchPage(0)"></i>
-                            <i class="col fas fa-list-ul fa-1x footer-ico" onclick="switchPage(1)"></i>
-                            <i class="col far fa-calendar-check fa-1x footer-ico" data-toggle="drawer" data-target="#dw-s2" onclick="switchPage(2)"></i>
+                            <i class="col far fa-newspaper fa-lg footer-ico" onclick="switchPage(0)"></i>
+                            <i class="col fas fa-list-ul fa-lg footer-ico" onclick="switchPage(1)"></i>
+                            <i class="col far fa-calendar-check fa-lg footer-ico" data-toggle="drawer" data-target="#dw-s2" onclick="switchPage(2)"></i>
                         </div>
                     </div>
                 </footer>
@@ -159,7 +234,7 @@
     function showimg(img){
             $("#pageAsso").hide();
             $(".full-img").find("img").attr("src",img.getAttribute("src"));
-            $("html").addClass("html-full-img"); //TODO Retirer ces deux classes lors du retour
+            $("html").addClass("html-full-img");
             $("body").addClass("body-full-img");
             $(".full-img").show();
     }
@@ -169,16 +244,6 @@
             $("html").removeClass("html-full-img");
             $("body").removeClass("body-full-img");
             $("#pageAsso").show();
-    }
-
-    function toggleFavoris(){
-        if($("#starFavoris").hasClass("far")){
-            $("#starFavoris").addClass("fas");
-            $("#starFavoris").removeClass("far");
-        }else{
-           $("#starFavoris").addClass("far");
-           $("#starFavoris").removeClass("fas");
-        }
     }
 
     function switchPage(page){
