@@ -17,6 +17,7 @@
     <link href="css/stickynavbar.css" rel="stylesheet">
     <link href="css/pageAsso.css" rel="stylesheet">
     <link rel="stylesheet" href="css/fontcodes.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
   </head>
 
   <body>
@@ -96,7 +97,21 @@
 
                 <!-- ******************************** CONTENT NewsPage ******************************** -->
                 <div id="assoNewsPage" style="display: none;">
-
+                    <div class="list-item">
+                        <div class="list-item-header">
+                            <img src="images/TEDxINSA/TEDx.png"/>
+                            <div style="padding-right: 40px;">
+                                <span class="item-title">TEDxINSA</span> <br/>
+                                <span class="item-date">2 octobre 2018 à 15:21</span>
+                            </div>
+                        </div>
+                        <img src="images\TEDxINSA\TEDxINSA_Couverture.png" class="img-fluid" alt="Responsive image">
+                        <div class="container">
+                            <p class="list-item-content">
+                                Venez soutenir les talents de l'INSA au concours speaker.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- ******************************** CONTENT PhotosPage ******************************** -->
@@ -144,7 +159,7 @@
     function showimg(img){
             $("#pageAsso").hide();
             $(".full-img").find("img").attr("src",img.getAttribute("src"));
-            $("html").addClass("html-full-img");
+            $("html").addClass("html-full-img"); //TODO Retirer ces deux classes lors du retour
             $("body").addClass("body-full-img");
             $(".full-img").show();
     }
