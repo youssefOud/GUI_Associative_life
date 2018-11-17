@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link href="css/fontawesome/fontawesome-all.css" rel="stylesheet">
     <link href="css/filtre.css" rel="stylesheet">
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/filtre.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   </head>
   <body>
     <h1>Hello, world!</h1>
@@ -48,67 +51,94 @@
         </div>
       </li>-->
 
-      <li class="list-group-item">Arts
+      <li class="list-group-item">Favoris
         <span class="badge">
-          <div class="checkbox">
-            <label><input type="checkbox" value="arts"></label>
+          <div class="checkbox gros">
+            <div class="souscheck">
+            <input id="favoris" type="checkbox" />
+            <label for="favoris"></label>
           </div>
         </span>
       </li>
       <li class="list-group-item" id="parentTest1"><span id="test1">Animation du campus</span>
         <span class="badge">
-          <div class="checkbox">
-            <label><input type="checkbox" id="caseAnim" value="anim"></label>
+          <i class="fa fa-chevron-down" id="chevron1" aria-hidden="true"></i>
+          <div class="checkbox gros">
+            <div class="souscheck">
+            <input id="caseAnim" type="checkbox" />
+            <label for="caseAnim"></label>
           </div>
         </span>
       </li>
 
-      <li class="list-group-item">Arts
+      <li class="list-group-item" id="parentTest2"><span id="test2">Arts</span>
         <span class="badge">
-          <div class="checkbox">
-            <label><input type="checkbox" value="arts"></label>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <div class="checkbox gros">
+            <div class="souscheck">
+            <input id="caseArts" type="checkbox" />
+            <label for="caseArts"></label>
           </div>
         </span>
       </li>
       <li class="list-group-item">Culture
         <span class="badge">
-          <div class="checkbox">
-            <label><input type="checkbox" value="culture"></label>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <div class="checkbox gros">
+            <div class="souscheck">
+            <input id="choix2" type="checkbox" />
+            <label for="choix2"></label>
           </div>
         </span>
       </li>
       <li class="list-group-item">Département
         <span class="badge">
-          <div class="checkbox">
-            <label><input type="checkbox" value="dept"></label>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <div class="checkbox gros">
+            <div class="souscheck">
+            <input id="choix1" type="checkbox" />
+            <label for="choix1"></label>
+          </div>
           </div>
         </span>
       </li>
       <li class="list-group-item">Humanitaires et Social
         <span class="badge">
-          <div class="checkbox">
-            <label><input type="checkbox" value="huma"></label>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <div class="checkbox gros">
+            <div class="souscheck">
+            <input id="huma" type="checkbox" />
+            <label for="huma"></label>
           </div>
         </span>
       </li>
       <li class="list-group-item">Loisir
         <span class="badge">
-          <div class="checkbox">
-            <label><input type="checkbox" value="loisir"></label>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <div class="checkbox gros">
+            <div class="souscheck">
+            <input id="loisir" type="checkbox" />
+            <label for="loisir"></label>
           </div>
         </span>
       </li>
       <li class="list-group-item">Sport
         <span class="badge">
-          <div class="checkbox">
-            <label><input type="checkbox" value="sport"></label>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <div class="checkbox gros">
+            <div class="souscheck">
+            <input id="sport" type="checkbox" />
+            <label for="sport"></label>
           </div>
         </span>
       </li>
       <li class="list-group-item">Technique et Scientifique
         <span class="badge">
-          <div class="checkbox">
-            <label><input type="checkbox" value="tech"></label>
+          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+          <div class="checkbox gros">
+            <div class="souscheck">
+            <input id="tech" type="checkbox" />
+            <label for="tech"></label>
           </div>
         </span>
       </li>
