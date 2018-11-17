@@ -1,6 +1,30 @@
-.btn-round-lg{
+.fav{
   border-radius : 22.5px;
+  background-color:#FCFCFC;
+  border:2px solid #E9E9E9;
+}
+
+.asso{
+  display:flex;flex-direction: row;justify-content: space-between;align-items: center;background-color:#E9E9E9;padding:10px; margin-bottom:8px
+}
+
+.thumbnail{
+  height:50px;width:50px;
 }
 
 
+.favStar{
+  color:#D6180A;
+}
 
+.titreAsso{
+  color:#676767; font-family:'Roboto',sans-serif; font-size: 20px;
+}
+
+.categAsso{
+  color:#676767; font-family:'Roboto',sans-serif; font-weight:100; font-size: 15px;
+}
+
+.textFav{
+  color:black; font-family:'Roboto',sans-serif; font-size: 18px;
+}
