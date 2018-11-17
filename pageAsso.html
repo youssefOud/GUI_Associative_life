@@ -27,7 +27,7 @@
                     <a class="nav-item nav-link return-link" onclick="switchPage(5)"><i class="fas fa-angle-left fa-2x"></i></a>
                     <a class="navbar-brand">TEDxINSA</a>
                     <form class="form-inline">
-                        <a class="nav-item nav-link star-link"><i class="far fa-star"></i></a>
+                        <a class="nav-item nav-link star-link"><i class="far fa-star fa-lg"></i></a>
                     </form>
                 </nav>
             </header>
@@ -234,7 +234,7 @@
     function showimg(img){
             $("#pageAsso").hide();
             $(".full-img").find("img").attr("src",img.getAttribute("src"));
-            $("html").addClass("html-full-img"); //TODO Retirer ces deux classes lors du retour
+            $("html").addClass("html-full-img");
             $("body").addClass("body-full-img");
             $(".full-img").show();
     }
