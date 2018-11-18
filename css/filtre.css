@@ -3,7 +3,7 @@
 }
 
 body{
-  
+
   font-family:'Roboto';
 }
 
@@ -66,7 +66,7 @@ input[type=checkbox] + label:before {
 }
 
 input[type=checkbox]:checked + label:before {
-  content: "\f14a"; 
+  content: "\f14a";
   color: var(--main-red);
 }
 
@@ -79,7 +79,6 @@ input[type=checkbox]:checked + label:before {
   margin-bottom: 7px;
   background-color: var(--main-grey);
   font-family: "roboto regular";
-
 }
 
 .assos, .assos2 {

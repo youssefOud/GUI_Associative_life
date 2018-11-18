@@ -46,3 +46,28 @@
     width: 80%;
 }
 
+.fa-angle-left{
+    vertical-align: middle;
+}
+.search-div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.search-div > form {
+    width: 100% ;
+}
+.search-div > form > input::placeholder {
+    color: var(--main-white);
+    font-family: var(--main-smallbutton-text-font);
+    opacity: 1;
+}
+.search-div > form > input,
+.search-div > form > input:focus,
+.search-div > form > input:active {
+    background-color: #d6180a;
+    border: 0;
+    transition: none;
+    color: var(--main-white);
+    font-size: 20px;
+}
