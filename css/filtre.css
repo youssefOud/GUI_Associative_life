@@ -58,6 +58,10 @@ input[type=checkbox]:checked + label:before {content: "\f14a"; color:#D6180A;}
   background-color: #F7F7F7;
 }
 
+.fa-angle-left{
+  vertical-align: middle;
+}
+
 .valider{
   font-family: var(--main-mediumbutton-text-font);
   font-size: var(--main-mediumbutton-text-size);
