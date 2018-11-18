@@ -57,3 +57,17 @@ input[type=checkbox]:checked + label:before {content: "\f14a"; color:#D6180A;}
 .assos, .assos2 {
   background-color: #F7F7F7;
 }
+
+.valider{
+  font-family: var(--main-mediumbutton-text-font);
+  font-size: var(--main-mediumbutton-text-size);
+  background-color: var(--main-white);
+  border-radius : 22.5px!important;
+  width: auto;
+  border:2px solid: var(--main-grey);
+  padding-top: 1px;
+  padding-bottom: 4px;
+  padding-left: 7px;
+  padding-right: 7px;
+  color: var(--main-darkgrey);
+}
