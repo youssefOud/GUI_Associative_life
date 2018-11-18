@@ -89,6 +89,20 @@
             switchPage(0);
             break;
         }
+        var con = findParameter("con");
+        console.log("connected ?" + con);
+        if(con === "true"){
+          console.log("hey");
+          $("#drawerCon").show();
+          $("#drawerNotCon").hide();
+          $("#filtreButton").attr("onclick", "window.location.href = 'filtre.html?con=true'");
+        }else{
+          $("#drawerCon").hide();
+          $("#drawerNotCon").show();
+          $(".favStar").addClass("far").removeClass("fas");
+          $(".fav").attr("onclick", "window.location.href = 'conIns.html?#ins'");
+          $("#filtreButton").attr("onclick", "window.location.href = 'filtre.html?con=false'");
+        }
     });
 
   function switchPage(page){
