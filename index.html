@@ -193,7 +193,7 @@
                   </div>
 
                   <div class="jumbotron asso pasCin">
-                    <img class="thumbnail" src="images/Cluji.png" />
+                    <img class="thumbnail" src="images/cluji.png" />
                     <div style="padding-right: 120px;">
                       <span class="titreAsso">Cluji</span> <br/>
                       <span class="categAsso">Loisir</span>
@@ -369,15 +369,23 @@
 
   $(document).ready(function() {
     $('body').bootstrapMaterialDesign();
-    var param = findParameter("page");
-    console.log(param);
-    switch(parseInt(param, 10)){
-      case 1:
+
+    switch(location.hash){
+      case "#actu":
+        switchPage(0);
+        break;
+      case "#asso":
         switchPage(1);
         break;
       default:
         switchPage(0);
         break;
+    }
+
+    var filt = findParameter("filt");
+    console.log(filt);
+    if(filt === "true"){
+      $(".pasCin").hide();
     }
   });
 
@@ -390,6 +398,7 @@
         $("#assolistPage").hide();
         $("#assoListFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
         $("#newsFooterButton").addClass("footer-ico-active").removeClass("footer-ico");
+        location.hash = "actu";
         break;
       case 1:
         $("#pageTitle").text("List d'assos");
@@ -397,6 +406,7 @@
         $("#assolistPage").show();
         $("#newsFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
         $("#assoListFooterButton").addClass("footer-ico-active").removeClass("footer-ico");
+        location.hash = "asso";
         break;
       default:
         break;
