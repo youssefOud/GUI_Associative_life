@@ -87,3 +87,9 @@
 #divConBut{
     text-align: center;
 }
+#drawerNotCon{
+    width:100%;
+    text-align:center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
