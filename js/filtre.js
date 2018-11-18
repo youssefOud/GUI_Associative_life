@@ -95,6 +95,7 @@ function ajouterAssosGenerique (numId) {
         });
     } else {
         $(asso).remove();
+        $('#parentTest' + numId).css('margin-bottom', '7px');
     }
 }
 
