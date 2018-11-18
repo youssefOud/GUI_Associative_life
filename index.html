@@ -38,21 +38,23 @@
           </header>
           <!-- DRAWER ******************************** -->
           <div id="dw-s1" class="bmd-layout-drawer bg-faded">
-            <span id="drawerCon" style="margin: 5% auto auto auto;">
-              <header>
-                <a class="navbar-brand">Bonjour Rémi !</a>
-              </header>
-              <main class="drawer-menu">
-                <ul class="list-group">
-                  <a class="list-group-item"><i class="fas fa-user-circle fa-2x"></i>Mes infos</a>
-                  <a class="list-group-item"><i class="fas fa-star fa-2x"></i>Mes favoris</a>
-                  <a class="list-group-item"><i class="fas fa-envelope fa-2x"></i>Nous contacter</a>
-                </ul>
-              </main>
-              <footer class="drawer-buttons">
-                <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'index.html?#actu'">Déconnexion</button>
-              </footer>
-            </span>
+              <div id="drawerCon" style="margin: 5% auto auto auto;">
+                <header>
+                  <a class="navbar-brand title-volet">Bonjour Rémi !</a>
+                </header>
+                <main class="drawer-menu">
+                  <ul class="list-group">
+                    <a class="list-group-item item-volet"><i class="fas fa-user-circle fa-lg"></i>Mes infos</a>
+                    <a class="list-group-item item-volet"><i class="fas fa-star fa-lg"></i>Mes favoris</a>
+                    <a class="list-group-item item-volet"><i class="fas fa-envelope fa-lg"></i>Nous contacter</a>
+                  </ul>
+                </main>
+            </div>
+          <footer class="drawer-buttons div-deco-but">
+              <button type="button" class="btn btn-round-lg drawer-button deconnexion" onclick="window.location.href = 'index.html?#actu'">DECONNEXION</button>
+          </footer>
+
+
             <div id="drawerNotCon" style="width:100%; text-align:center;">
                 <p>En vous inscrivant, vous accédez à des contenus exclusifs.
                 </p>
