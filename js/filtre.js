@@ -18,8 +18,9 @@ $(document).ready(function () {
         cocherAssosGenerique(numParent);
   });
 
-  $(".chevron").on('click', function() {
-        var numId = $(this).prop("id").charAt(4);
+  $(".fa").on('click', function() {
+        var numId = $(this).prop("id").charAt(7);
+        console.log(numId);
         changerSensChevronGenerique(numId);
         ajouterAssosGenerique(numId);
   });

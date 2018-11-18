@@ -3,8 +3,7 @@
 }
 
 body{
-
-  font-family:'Roboto';
+  font-family:'Roboto regular';
 }
 
 .containerList{
@@ -78,10 +77,6 @@ input[type=checkbox]:checked + label:before {
   margin-top: 0;
   margin-bottom: 7px;
   background-color: var(--main-grey);
-}
-
-.assos, .assos2 {
-  background-color: var(--main-lightgrey);
 }
 
 .fa-angle-left{
