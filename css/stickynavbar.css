@@ -110,3 +110,4 @@
 .bg-faded{
     background-color: var(--main-lightgrey);
 }
+html,body { height:100%; }
