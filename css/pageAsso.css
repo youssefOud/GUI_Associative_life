@@ -111,3 +111,13 @@ h3 {
 .btn-round-lg > i {
     margin-right: 5px;
 }
+.icon-link {
+    display:inline-block;
+    float:left;
+    text-align:center;
+}
+.icon-link i {
+    display:block;
+    width:100%;
+    clear:both;
+}

@@ -32,4 +32,14 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-  
+
+.icon-link {
+    display:inline-block;
+    float:left;
+    text-align:center;
+}
+.icon-link i {
+    display:block;
+    width:100%;
+    clear:both;
+}
