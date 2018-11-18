@@ -190,30 +190,6 @@
 </html>
 
 <script>
-  $( ".fav" ).click(function(event) {
-    if(event.currentTarget.firstElementChild.classList[0]=="fas"){
-      event.currentTarget.firstElementChild.classList.replace("fas","far");
-    }
-    else{
-      event.currentTarget.firstElementChild.classList.replace("far","fas");
-    }
-    event.currentTarget.blur();
-  });
-
-  $(document).ready(function() {
-    $('body').bootstrapMaterialDesign();
-
-    switch(location.hash){
-      case "#actu":
-        switchPage(0);
-        break;
-      case "#asso":
-        switchPage(1);
-        break;
-      default:
-        switchPage(0);
-        break;
-    }
 
     var filt = findParameter("filt");
     console.log("filtered ?" + filt);
