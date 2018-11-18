@@ -1,5 +1,5 @@
 body{
-  
+
   font-family:'Roboto';
 }
 .list-group-item {
@@ -40,18 +40,33 @@ span#test1 {
   align-content: center;
 }
 
-.gros {color:grey;border-color: grey;font-size: 1.125rem;}
-input[type=checkbox] {display:none;}
-input[type=checkbox] + label {cursor:pointer;}
-input[type=checkbox] + label:before {font-family: FontAwesome;display: block;content: "\f096";width:1.125rem}
-input[type=checkbox]:checked + label:before {content: "\f14a"; color:#D6180A;}
+.gros {
+    color:grey;
+    border-color: grey;
+    font-size: 1.125rem;
+}
+input[type=checkbox] {
+    display:none;
+}
+input[type=checkbox] + label {
+    cursor:pointer;
+}
+input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    display: block;
+    content: "\f096";
+    width:1.125rem
+}
+input[type=checkbox]:checked + label:before {
+    content: "\f14a";
+    color:#D6180A;
+}
 
 .list-group-item {
   margin-top: 0.450rem;
   margin-bottom: 0.450rem;
   background-color: #E9E9E9;
   font-family: "roboto regular";
-
 }
 
 .assos, .assos2 {
