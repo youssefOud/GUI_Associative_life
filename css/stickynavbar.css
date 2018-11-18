@@ -71,3 +71,16 @@
     color: var(--main-white);
     font-size: 20px;
 }
+.connexion {
+  font-family: var(--main-bigbutton-text-font);
+  font-size: var(--main-bigbutton-text-size);
+  background-color: var(--main-red) !important;
+  border-radius: 12px!important;
+  padding-top: 3px;
+  padding-bottom: 4px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 157px !important;
+  height: 41px;
+  color: var(--main-white) !important;
+}
