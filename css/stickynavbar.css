@@ -107,3 +107,6 @@
     font-family: var(--main-mediumbutton-text-font);
     font-size: var(--main-mediumbutton-text-size);
 }
+.bg-faded{
+    background-color: var(--main-lightgrey);
+}
