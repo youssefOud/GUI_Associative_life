@@ -9,15 +9,18 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script src="js/util.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" crossorigin="anonymous">
     <link href="css/colorcodes.css" rel="stylesheet">
     <link href="css/stickyfooter.css" rel="stylesheet">
     <link href="css/stickynavbar.css" rel="stylesheet">
+    <link href="css/pageAsso.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/fontcodes.css">
     <link rel="stylesheet" href="css/ListeAssos.css">
   </head>
 
@@ -34,40 +37,147 @@
               </nav>
           </header>
           <div id="dw-s1" class="bmd-layout-drawer bg-faded">
-            <header>
-              <a class="navbar-brand">Bonjour Rémi !</a>
-            </header>
-            <main class="drawer-menu">
-              <ul class="list-group">
-                <a class="list-group-item"><i class="fas fa-user-circle fa-2x"></i>Mes infos</a>
-                <a class="list-group-item"><i class="fas fa-star fa-2x"></i>Mes favoris</a>
-                <a class="list-group-item"><i class="fas fa-envelope fa-2x"></i>Nous contacter</a>
-              </ul>
-            </main>
-            <footer class="drawer-buttons">
-              <button type="button" class="btn btn-outline-danger drawer-button">Déconnexion</button>
-            </footer>
+            <span id="drawerCon" style="margin: 5% auto auto auto;">
+              <header>
+                <a class="navbar-brand">Bonjour Rémi !</a>
+              </header>
+              <main class="drawer-menu">
+                <ul class="list-group">
+                  <a class="list-group-item"><i class="fas fa-user-circle fa-2x"></i>Mes infos</a>
+                  <a class="list-group-item"><i class="fas fa-star fa-2x"></i>Mes favoris</a>
+                  <a class="list-group-item"><i class="fas fa-envelope fa-2x"></i>Nous contacter</a>
+                </ul>
+              </main>
+              <footer class="drawer-buttons">
+                <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'index.html?#actu'">Déconnexion</button>
+              </footer>
+            </span>
+            <div id="drawerNotCon" style="width:100%; text-align:center;">
+                <footer class="drawer-buttons">
+                    <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'conIns.html?#con'">Se connecter</button>
+                    <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'conIns.html?#ins'">S'inscrire</button>
+                </footer>
+            </div>
           </div>
           <main class="bmd-layout-content">
             <!-- NEWS CONTENT ******************************** -->
-            <div class="container" id="newsPage">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed diam lectus. Maecenas quis ullamcorper elit. Nunc imperdiet sem tortor. Donec ullamcorper, justo vitae gravida imperdiet, libero nibh molestie ante, vitae facilisis leo leo ut urna. Aliquam pharetra metus at orci semper porttitor eget at ipsum. Suspendisse sed pharetra risus. Proin sapien turpis, posuere ut blandit dapibus, ornare non nisl. Sed at ultricies augue. Vestibulum in pulvinar nunc. Nunc elementum luctus massa, at tristique odio fermentum in. Phasellus ac nunc id eros maximus eleifend ac id ex. Integer pellentesque orci vel tortor eleifend, et gravida nibh auctor. Aenean et felis id nulla imperdiet volutpat. Morbi eu ex lorem. Nulla efficitur magna eget eros facilisis, in faucibus lectus tincidunt. Duis ut eros tempus, pellentesque neque vestibulum, commodo risus.
+            <div id="newsPage">
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <img src="images/TEDxINSA/TEDx.png"/>
+                        <div style="padding-right: 40px;">
+                            <span class="item-title">TEDxINSA</span> <br/>
+                            <span class="item-date">15 octobre 2018 à 15:21</span>
+                        </div>
+                    </div>
+                    <img src="images\TEDxINSA\TEDxINSA_Couverture.png" class="img-fluid" alt="Responsive image">
+                    <div class="container">
+                        <p class="list-item-content">
+                            Venez soutenir les talents de l'INSA au concours speaker.
+                        </p>
+                        <div class="row">
+                            <div class="col">
+                                <button class="btn btn-round-lg ">
+                                  <i class="far fa-calendar-alt fa-lg red-icon"></i>
+                                  <span>1er Mars 2018</span>
+                                </button>
+                                <button class="btn btn-round-lg ">
+                                  <i class="fas fa-map-marker-alt fa-lg red-icon"></i>
+                                  <span>Gaston Berger</span>
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-round-lg ">
+                                  <i class="far fa-clock fa-lg red-icon"></i>
+                                  <span>19h30 - 21h30</span>
+                                </button>
+                                <button class="btn btn-round-lg ">
+                                  <i class="fas fa-euro-sign fa-lg red-icon"></i>
+                                  <span>Gratuit</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                </div>
 
-                    Cras tempor placerat diam, quis tempus felis fermentum at. Quisque tristique odio lorem, nec ullamcorper dui fringilla et. Vestibulum varius mauris vitae velit sodales tincidunt. Nulla facilisi. Aliquam erat volutpat. Vestibulum auctor enim in libero viverra, sit amet tempus dolor finibus. Sed rutrum, ipsum vitae maximus blandit, massa lacus laoreet turpis, id suscipit magna lectus eu risus. Nullam sit amet mollis tortor. Phasellus quam diam, interdum sit amet auctor sed, tempus ut metus. Nullam molestie massa libero, sit amet molestie mi convallis sit amet. Proin turpis justo, venenatis sit amet vehicula nec, pharetra a est. Morbi pellentesque ornare quam, sed maximus sapien venenatis sodales.
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <img src="images/ajil.png"/>
+                        <div style="padding-right: 40px;">
+                            <span class="item-title">AJIL</span> <br/>
+                            <span class="item-date">12 octobre 2018 à 16:35</span>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <p class="list-item-content">
+                            Merci à tous d'être venus si nombreux à notre spectacle de junglage hier soir à la rotonde ! C'était énorme !
+                        </p>
+                    </div>
+                    <br />
+                </div>
 
-                    Aliquam consequat lorem nulla, vitae volutpat risus finibus eget. Morbi pulvinar volutpat lectus a molestie. Pellentesque ullamcorper congue nibh, eu interdum nisl consectetur eget. In hac habitasse platea dictumst. Curabitur tincidunt auctor nulla ut accumsan. Morbi non turpis porta, sollicitudin mauris nec, convallis felis. Fusce et metus at nulla imperdiet tincidunt. Donec facilisis convallis eros, in consequat odio facilisis sit amet.
+                <div class="list-item">
+                    <div class="list-item-header">
+                        <img src="images/lamouette.png"/>
+                        <div style="padding-right: 40px;">
+                            <span class="item-title">La Mouette</span> <br/>
+                            <span class="item-date">20 septembre 2018 à 10:42</span>
+                        </div>
+                    </div>
+                    <img src="images\grainedemouette.png" class="img-fluid" alt="Responsive image">
+                    <div class="container">
+                        <p class="list-item-content">
+                            Vous n'êtes pas au courant ? La Mouette et Graine d'Image ouvrent leur tout nouveau site internet ! Vous pourrez y réserver des créneaux photos ou des captations videos, ou encore commander vos photos en ligne !
+                        </p>
+                    </div>
+                    <br />
+                </div>
 
-                    Sed lacinia, tellus nec hendrerit hendrerit, elit neque vulputate erat, eu convallis risus purus eu turpis. Donec porttitor suscipit quam. Donec id arcu orci. Phasellus fermentum nisl urna, nec commodo ipsum viverra non. Cras felis arcu, rutrum eget accumsan laoreet, scelerisque eget magna. Aenean sed tempor urna. Fusce accumsan, enim eu varius hendrerit, mi justo euismod libero, eu euismod libero lacus sit amet sem. Praesent sed lectus erat. Ut ut aliquet lectus, a pulvinar ligula. In eu nunc imperdiet, dignissim sem eget, eleifend est. Nam porta faucibus nunc non ullamcorper.
-
-                    Nulla id maximus augue, nec feugiat quam. Integer lectus nisl, ultricies sed tincidunt nec, scelerisque vel lorem. Fusce non ornare ligula. Vivamus molestie in ligula vel viverra. Maecenas rhoncus libero urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc quis lorem fringilla, aliquam libero vel, ornare ex. Phasellus neque tortor, consectetur vel aliquet a, sollicitudin sed est.
-                </p>
+                    <div class="list-item">
+                        <div class="list-item-header">
+                            <img src="images/lezarts.png"/>
+                            <div style="padding-right: 40px;">
+                                <span class="item-title">Lezarts</span> <br/>
+                                <span class="item-date">25 octobre 2018 à 17:35</span>
+                            </div>
+                        </div>
+                        <img src="images\lezart.jpg" class="img-fluid" alt="Responsive image">
+                        <div class="container">
+                            <p class="list-item-content">
+                                Les Lezarts se mobilisent pour rendre les barmans K-Fet terrifiant ôur la soirée halloween de ce soir ! Soyez nombreux, un stand maquillage sera tenu en début de soirée afin de perfectionner votre déguisement !
+                            </p>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-round-lg ">
+                                      <i class="far fa-calendar-alt fa-lg red-icon"></i>
+                                      <span>Ce soir</span>
+                                    </button>
+                                    <button class="btn btn-round-lg ">
+                                      <i class="fas fa-map-marker-alt fa-lg red-icon"></i>
+                                      <span>K-Fet</span>
+                                    </button>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-round-lg ">
+                                      <i class="far fa-clock fa-lg red-icon"></i>
+                                      <span>18h00 - 22h00</span>
+                                    </button>
+                                    <button class="btn btn-round-lg ">
+                                      <i class="fas fa-euro-sign fa-lg red-icon"></i>
+                                      <span>Gratuit</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                    </div>
             </div>
 
 
             <!-- LISTE ASSO CONTENT ******************************** -->
             <div id="assolistPage">
-                  <div class="jumbotron asso" >
+                  <div class="jumbotron asso pasCin" >
                     <img class="thumbnail" src="images/ajil.png" />
                     <div style="padding-right: 40px;">
                       <span class="titreAsso">AJIL</span> <br/>
@@ -79,8 +189,20 @@
                     </button>
                   </div>
 
-                  <div class="jumbotron asso">
-                    <img class="thumbnail" src="images/Cluji.png" />
+                  <div class="jumbotron asso pasCin">
+                    <img class="thumbnail" src="images/clubrock.png" />
+                    <div style="padding-right: 50px">
+                      <span class="titreAsso">Club Rock</span> <br/>
+                      <span class="categAsso">Arts et spectacles</span>
+                    </div>
+                    <button class="btn  btn-round-lg btn-lg fav" >
+                      <i class="far fa-star favStar" ></i>
+                      <span class="textFav">Favoris</span>
+                    </button>
+                  </div>
+
+                  <div class="jumbotron asso pasCin">
+                    <img class="thumbnail" src="images/cluji.png" />
                     <div style="padding-right: 120px;">
                       <span class="titreAsso">Cluji</span> <br/>
                       <span class="categAsso">Loisir</span>
@@ -91,7 +213,7 @@
                     </button>
                   </div>
 
-                  <div class="jumbotron asso" >
+                  <div class="jumbotron asso pasCin" >
                     <img class="thumbnail" src="images/codinsa.jpg" />
                     <div>
                       <span class="titreAsso">Cod'INSA</span> <br/>
@@ -103,7 +225,19 @@
                     </button>
                   </div>
 
-                  <div class="jumbotron asso" >
+                  <div class="jumbotron asso pasCin" >
+                    <img class="thumbnail" src="images/coil.png" />
+                    <div style="padding-right: 120px">
+                      <span class="titreAsso">COIL</span> <br/>
+                      <span class="categAsso">Loisir</span>
+                    </div>
+                    <button class="btn  btn-round-lg btn-lg fav"  >
+                      <i class="fas fa-star favStar" ></i>
+                      <span class="textFav">Favoris</span>
+                    </button>
+                  </div>
+
+                  <div class="jumbotron asso pasCin" >
                     <img class="thumbnail" src="images/exit.png" />
                     <div style="padding-right: 30px">
                       <span class="titreAsso">Exit</span> <br/>
@@ -116,7 +250,7 @@
                   </div>
 
 
-                  <div class="jumbotron asso" >
+                  <div class="jumbotron asso " >
                     <img class="thumbnail" src="images/grainesdimages.jpg" />
                     <div style="padding-right: 5px">
                       <span class="titreAsso">Graines d'images</span> <br/>
@@ -128,7 +262,19 @@
                     </button>
                   </div>
 
-                  <div class="jumbotron asso" >
+                  <div class="jumbotron asso pasCin" >
+                    <img class="thumbnail" src="images/indiaction.jpg" />
+                    <div style="padding-right: 30px">
+                      <span class="titreAsso">Indiaction</span> <br/>
+                      <span class="categAsso">Humanitaire et social</span>
+                    </div>
+                    <button class="btn  btn-round-lg btn-lg fav" >
+                      <i class="fas fa-star favStar" ></i>
+                      <span class="textFav">Favoris</span>
+                    </button>
+                  </div>
+
+                  <div class="jumbotron asso pasCin" >
                     <img class="thumbnail" src="images/larotonde.jpg" />
                     <div style="padding-right: 45px">
                       <span class="titreAsso">La Rotonde</span> <br/>
@@ -152,31 +298,7 @@
                     </button>
                   </div>
 
-                  <div class="jumbotron asso" >
-                    <img class="thumbnail" src="images/objectif21.jpg" />
-                    <div style="padding-right: 30px">
-                      <span class="titreAsso">Objectif 21</span> <br/>
-                      <span class="categAsso">Humanitaire et social</span>
-                    </div>
-                    <button class="btn  btn-round-lg btn-lg fav" >
-                      <i class="far fa-star favStar" ></i>
-                      <span class="textFav">Favoris</span>
-                    </button>
-                  </div>
-
-                  <div class="jumbotron asso" >
-                    <img class="thumbnail" src="images/indiaction.jpg" />
-                    <div style="padding-right: 30px">
-                      <span class="titreAsso">Indiaction</span> <br/>
-                      <span class="categAsso">Humanitaire et social</span>
-                    </div>
-                    <button class="btn  btn-round-lg btn-lg fav" >
-                      <i class="fas fa-star favStar" ></i>
-                      <span class="textFav">Favoris</span>
-                    </button>
-                  </div>
-
-                  <div class="jumbotron asso" >
+                  <div class="jumbotron asso pasCin" >
                     <img class="thumbnail" src="images/lezarts.png" />
                     <div style="padding-right: 30px">
                       <span class="titreAsso">Lezarts</span> <br/>
@@ -188,23 +310,11 @@
                     </button>
                   </div>
 
-                  <div class="jumbotron asso" >
-                    <img class="thumbnail" src="images/coil.png" />
-                    <div style="padding-right: 120px">
-                      <span class="titreAsso">COIL</span> <br/>
-                      <span class="categAsso">Loisir</span>
-                    </div>
-                    <button class="btn  btn-round-lg btn-lg fav"  >
-                      <i class="fas fa-star favStar" ></i>
-                      <span class="textFav">Favoris</span>
-                    </button>
-                  </div>
-
-                  <div class="jumbotron asso">
-                    <img class="thumbnail" src="images/clubrock.png" />
-                    <div style="padding-right: 50px">
-                      <span class="titreAsso">Club Rock</span> <br/>
-                      <span class="categAsso">Arts et spectacles</span>
+                  <div class="jumbotron asso pasCin" >
+                    <img class="thumbnail" src="images/objectif21.jpg" />
+                    <div style="padding-right: 30px">
+                      <span class="titreAsso">Objectif 21</span> <br/>
+                      <span class="categAsso">Humanitaire et social</span>
                     </div>
                     <button class="btn  btn-round-lg btn-lg fav" >
                       <i class="far fa-star favStar" ></i>
@@ -212,7 +322,7 @@
                     </button>
                   </div>
 
-                  <div class="jumbotron asso">
+                  <div class="jumbotron asso pasCin">
                     <img class="thumbnail" src="images/wildducks.png" />
                     <div style="padding-right: 60px">
                       <span class="titreAsso">Wild Ducks</span> <br/>
@@ -228,9 +338,9 @@
             <footer class="footer">
               <div class="container">
                 <div class="row">
-                  <i class="col far fa-newspaper fa-1x footer-ico-active" onclick="switchPage(0)" id="newsFooterButton"></i>
-                  <i class="col fas fa-list-ul fa-1x footer-ico" onclick="switchPage(1)" id="assoListFooterButton"></i>
-                  <i class="col far fa-calendar-check fa-1x footer-ico" data-toggle="drawer" data-target="#dw-s2" ></i>
+                  <i class="col far fa-newspaper fa-lg footer-ico-active" onclick="switchPage(0)" id="newsFooterButton"></i>
+                  <i class="col fas fa-list-ul fa-lg footer-ico" onclick="switchPage(1)" id="assoListFooterButton"></i>
+                  <i class="col far fa-calendar-alt fa-lg footer-ico" data-toggle="drawer" data-target="#dw-s2" ></i>
                 </div>
               </div>
             </footer>
@@ -238,42 +348,51 @@
       </div>
 
 
+
   </body>
 </html>
 
 <script>
-$( ".fav" ).click(function(event) {
-  if(event.currentTarget.firstElementChild.classList[0]=="fas"){
-    event.currentTarget.firstElementChild.classList.replace("fas","far");
-  }
-  else{
-    event.currentTarget.firstElementChild.classList.replace("far","fas");
-  }
-});
-  function findParameter(parameterName) {
-    var result = null,
-        tmp = [];
-    location.search
-        .substr(1)
-        .split("&")
-        .forEach(function (item) {
-          tmp = item.split("=");
-          if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
-        });
-    return result;
-  }
+  $( ".fav" ).click(function(event) {
+    if(event.currentTarget.firstElementChild.classList[0]=="fas"){
+      event.currentTarget.firstElementChild.classList.replace("fas","far");
+    }
+    else{
+      event.currentTarget.firstElementChild.classList.replace("far","fas");
+    }
+    event.currentTarget.blur();
+  });
 
   $(document).ready(function() {
     $('body').bootstrapMaterialDesign();
-    var param = findParameter("page");
-    console.log(param);
-    switch(parseInt(param, 10)){
-      case 1:
+
+    switch(location.hash){
+      case "#actu":
+        switchPage(0);
+        break;
+      case "#asso":
         switchPage(1);
         break;
       default:
         switchPage(0);
         break;
+    }
+
+    var filt = findParameter("filt");
+    console.log("filtered ?" + filt);
+    if(filt === "true"){
+      $(".pasCin").hide();
+    }
+
+    var con = findParameter("con");
+    console.log("connected ?" + con);
+    if(con === "true"){
+      console.log("hey");
+      $("#drawerCon").show();
+      $("#drawerNotCon").hide();
+    }else{
+      $("#drawerCon").hide();
+      $("#drawerNotCon").show();
     }
   });
 
@@ -286,6 +405,7 @@ $( ".fav" ).click(function(event) {
         $("#assolistPage").hide();
         $("#assoListFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
         $("#newsFooterButton").addClass("footer-ico-active").removeClass("footer-ico");
+        location.hash = "actu";
         break;
       case 1:
         $("#pageTitle").text("List d'assos");
@@ -293,6 +413,7 @@ $( ".fav" ).click(function(event) {
         $("#assolistPage").show();
         $("#newsFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
         $("#assoListFooterButton").addClass("footer-ico-active").removeClass("footer-ico");
+        location.hash = "asso";
         break;
       default:
         break;

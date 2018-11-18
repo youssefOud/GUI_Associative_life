@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="js/filtre.js"></script>
+    <script src="js/util.js"></script>
 
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
@@ -26,12 +27,13 @@
   <body>
       <header>
         <nav class="navbar">
-            <a class="nav-item nav-link return-link nav-ico" href="index.html?page=0"><i class="fas fa-arrow-left"></i></a>
+            <a class="nav-item nav-link return-link nav-ico" onclick="goBack();"><i class="fas fa-arrow-left"></i></a>
             <form class="form-inline">
-                <button type="button" class="btn btn-light"  href="index.html?page=1">Valider</button>
+                <button type="button" class="btn btn-light"  onclick="window.location.href = 'index.html?filt=true#asso'">Valider</button>
             </form>
         </nav>
       </header>
+      
       <div class="container-fluid" id="filtrePage" style="margin-top: 60px;">
           <li class="list-group-item">Favoris
             <span class="badge">
