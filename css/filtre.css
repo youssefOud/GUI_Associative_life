@@ -45,27 +45,6 @@ span#test1 {
 }
 
 .gros {
-<<<<<<< HEAD
-    color:grey;
-    border-color: grey;
-    font-size: 1.125rem;
-}
-input[type=checkbox] {
-    display:none;
-}
-input[type=checkbox] + label {
-    cursor:pointer;
-}
-input[type=checkbox] + label:before {
-    font-family: FontAwesome;
-    display: block;
-    content: "\f096";
-    width:1.125rem
-}
-input[type=checkbox]:checked + label:before {
-    content: "\f14a";
-    color:#D6180A;
-=======
   color: var(--main-darkgrey);
   border-color: var(--main-darkgrey);
   font-size: 1.125rem;
@@ -87,9 +66,8 @@ input[type=checkbox] + label:before {
 }
 
 input[type=checkbox]:checked + label:before {
-  content: "\f14a"; 
+  content: "\f14a";
   color: var(--main-red);
->>>>>>> a00dd46681971746f3143f22f6b44766891e41de
 }
 
 .list-group-item {
