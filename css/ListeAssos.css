@@ -1,5 +1,6 @@
 .fav{
   border-radius : 22.5px!important;
+  width: auto;
   background-color:#FCFCFC;
   border:2px solid #E9E9E9;
 }
