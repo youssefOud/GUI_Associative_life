@@ -25,11 +25,53 @@
 
         <div class="container-fluid" style="margin-top: 60px;">
             <div id="conPage">
-                <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'index.html?con=true#actu'">Connexion</button>
+                    <br>
+                    <form>
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <br><br>
+                            <div align="center">
+                            <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'index.html?con=true#actu'">Connexion</button>
+                            </div>
+                        </form>
+                          
+                
             </div>
             <div id="insPage">
-                <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'index.html#actu'">Inscription</button>
-            </div>
+                    <br>
+                    <form>
+                            <div class="form-group">
+                                    <label for="exampleInputEmail1">Nom</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleInputEmail1">Prenom</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>      
+                            <div class="form-group">
+                              <label for="exampleInputEmail1">Mail</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                              <label for="exampleInputPassword1">Mot de passe</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                    <label for="exampleInputPassword1">Confirmer mot de passe</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <br><br>
+                            <div align="center">
+                            <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'index.html?con=true#actu'">Inscription</button>
+                            </div>
+                        </form>
+                </div>
         </div>
   </body>
 </html>
@@ -46,6 +88,20 @@
         default:
             switchPage(0);
             break;
+        }
+        var con = findParameter("con");
+        console.log("connected ?" + con);
+        if(con === "true"){
+          console.log("hey");
+          $("#drawerCon").show();
+          $("#drawerNotCon").hide();
+          $("#filtreButton").attr("onclick", "window.location.href = 'filtre.html?con=true'");
+        }else{
+          $("#drawerCon").hide();
+          $("#drawerNotCon").show();
+          $(".favStar").addClass("far").removeClass("fas");
+          $(".fav").attr("onclick", "window.location.href = 'conIns.html?#ins'");
+          $("#filtreButton").attr("onclick", "window.location.href = 'filtre.html?con=false'");
         }
     });
 

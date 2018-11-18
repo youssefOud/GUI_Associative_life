@@ -9,7 +9,6 @@
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-    <script src="js/util.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" crossorigin="anonymous">
@@ -26,7 +25,7 @@
             <header class="bmd-layout-header">
                 <nav class="navbar">
                     <a class="nav-item nav-link return-link" onclick="back()"><i class="fas fa-angle-left fa-2x"></i></a>
-                    <a class="navbar-brand">TEDxINSA</a>
+                    <a class="navbar-brand">La Mouette</a>
                     <form class="form-inline">
                         <a class="nav-item nav-link star-link" onclick="starToogle()"><i id="favoriStar" class="far fa-star fa-lg"></i></a>
                     </form>
@@ -35,62 +34,31 @@
             <main class="bmd-layout-content">
                 <!-- ******************************** CONTENT HomePage ******************************** -->
                 <div id="assoHomePage" >
-                    <img src="images\TEDxINSA\TEDxINSA_Couverture.png" class="img-fluid" alt="Responsive image">
+                    <img src="images\lamouettecouv.png" class="img-fluid" alt="Responsive image">
                     <div class="row tabs">
                         <a class="col" onclick="switchPage(3)">NEWS</a>
                         <a class="col" onclick="switchPage(4)">PHOTOS</a>
                     </div>
                     <div class="container" id="assoHomePage-content">
                         <p>
-                            TEDxINSA à pour but d'organiser un événement similaire aux <b>conférences TED</b> afin de partager des idées pour changer le monde ! Sous une licence délivrée par TED nous mettons en place <b>une après midi de conférence</b>, rassemblons des speakers des quatre coins de la France (voir du monde ;) ) pour partager leur expérience avec des centaines de spectateurs.</p>
-                        <p>
-                            TEDxINSA s'articule autour de <b>différents pôles</b>, <b>communication</b>, <b>sponsors</b> (ce qui finance notre événement), <b>speakers</b> (ce qui nous permet d'avoir les meilleurs conférenciers), <b>technique</b> (afin de permettre aux absents de nous retrouver sur un live), <b>logistique</b> (pour une dégustation digne des plus grands), <b>animation</b> (afin de divertir nos spectateurs entre deux conférences).
-                        </p>
-                        <h3>Description des postes</h3>
-                        <p>
-                            <b>Présidente :</b> Emilie Borghino <br>
-                            <b>Vice-Président :</b> Salim Hafid<br>
-                            <b>Trésorier :</b> Corentin Giral<br>
-                            <b>Secrétaire :</b> Agathe Liguori<br>
-                            <b>Responables de pôles :</b> ...<br>
-                            <b>Membre de pôle :</b> ...
-                        </p>
-                        <h3>Fonctionnement Interne</h3>
-                        <p>
-                            A TEDxINSA, chaque pôle à <b>2 co-responsables</b>, ces personnes sont chargée de <b>guider l'équipe</b> dont elle ont la charge et de vérifier que les deadlines sont bien respectées.<br>
-                            Les pôles ont chacun <b>3 à 7 membres</b> et organisent leur réunions comme il leur semble (nous conseillons une <b>réunion hebdomadaire de 1h</b>).<br>
-                            Les responsanbles de pôles n'ont qu'une réunion supplémentaire, la <b>réunion du Conseil Administratif</b> (Bureau + Responsables) qui est également <b>1h hebdomadaire</b>.
+                            La Mouette propose aux passionnés de vidéo de se réunir autour de projets communs riches et variés. De la réalisation de documentaires et court-métrages à la captation des événements associatifs (week-ends, concerts, soirées…), vous disposerez du matériel semi-pro disponible dans les locaux de La Mouette. Ce sera également l’endroit parfait pour débuter ou pour consolider vos bases techniques (réalisation, montage, colorimétrie, effets spéciaux…) au sein d’ateliers et de formations organisés par les membres de l’association. Que l’on soit expérimenté ou débutant, La Mouette est l’endroit parfait pour se réunir dans une ambiance conviviale afin de partager sa passion avec d’autres étudiants.
                         </p>
                         <h3>Pour nous trouver</h3>
                         <p>
-                            <b>Local :</b> Numéro 13 Batiment B (côté cimetière) <br>
-                            <i class="fas fa-envelope fa-1x"></i> <u>contact@tedxinsa.com</u> <br>
-                            <i class="fas fa-phone fa-1x"></i> 06.05.12.48.75 <br>
-                            <i class="fas fa-globe-africa fa-1x"><a href="https://www.tedxinsa.com/">https://www.tedxinsa.com/</a></i><br>
+                            <b>Local :</b> RdC Batiment D <br>
+                            <i class="fas fa-envelope fa-1x"></i> <u>bureau@medialamouette.fr </u> <br>
+                            <i class="fas fa-phone fa-1x"></i> 06.15.18.41.58 <br>
+                            <i class="fas fa-globe-africa fa-1x"><a href="https://medialamouette.fr/"> https://medialamouette.fr/</a></i><br>
                         </p>
                         <div class="row">
                             <div class=" col">
-                                <a href="https://facebook.com/tedxinsa">
+                                <a href="https://www.facebook.com/MediaLaMouette/">
                                     <i class="fab fa-facebook-square fa-2x social-ico facebook-ico"></i>
-                                    /tedxinsa
+                                    /medialamouette
                                 </a><br>
-                                <a href="https://www.instagram.com/tedxinsa/">
-                                    <i class="fab fa-instagram fa-2x social-ico instagram-ico"></i>
-                                    /tedxinsa
-                                </a><br>
-                                <a href="https://twitter.com/tedxinsa">
+                                <a href="https://twitter.com/MediaLaMouette">
                                     <i class="fab fa-twitter-square fa-2x social-ico twitter-ico" ></i>
-                                    @tedxinsa
-                                </a> <br>
-                            </div>
-                            <div class=" col">
-                                <a href="https://www.flickr.com/photos/tedxinsa">
-                                    <i class="fab fa-flickr fa-2x social-ico flickr-ico"></i>
-                                    /tedxinsa
-                                </a> <br>
-                                <a href="https://www.youtube.com/results?search_query=tedxinsa">
-                                    <i class="fab fa-youtube-square fa-2x social-ico youtube-ico"></i>
-                                    /tedxinsa
+                                    @medialamouette
                                 </a> <br>
                             </div>
                         </div>
@@ -101,47 +69,25 @@
                 <div id="assoNewsPage" style="display: none;">
                     <div class="list-item">
                         <div class="list-item-header">
-                            <img src="images/TEDxINSA/TEDx.png"/>
+                            <img src="images/lamouette.png"/>
                             <div style="padding-right: 40px;">
-                                <span class="item-title">TEDxINSA</span> <br/>
-                                <span class="item-date">15 octobre 2018 à 15:21</span>
+                                <span class="item-title">La Mouette</span> <br/>
+                                <span class="item-date">20 septembre 2018 à 10:42</span>
                             </div>
                         </div>
-                        <img src="images\TEDxINSA\TEDxINSA_Couverture.png" class="img-fluid" alt="Responsive image">
+                        <img src="images\grainedemouette.png" class="img-fluid" alt="Responsive image">
                         <div class="container">
                             <p class="list-item-content">
-                                Venez soutenir les talents de l'INSA au concours speaker.
+                                Vous n'êtes pas au courant ? La Mouette et Graine d'Image ouvrent leur tout nouveau site internet ! Vous pourrez y réserver des créneaux photos ou des captations videos, ou encore commander vos photos en ligne !
                             </p>
-                            <div class="row">
-                                <div class="col">
-                                    <button class="btn btn-round-lg ">
-                                      <i class="far fa-calendar-alt fa-lg red-icon"></i>
-                                      <span>1er Mars 2018</span>
-                                    </button>
-                                    <button class="btn btn-round-lg ">
-                                      <i class="fas fa-map-marker-alt fa-lg red-icon"></i>
-                                      <span>Gaston Berger</span>
-                                    </button>
-                                </div>
-                                <div class="col">
-                                    <button class="btn btn-round-lg ">
-                                      <i class="far fa-clock fa-lg red-icon"></i>
-                                      <span>19h30 - 21h30</span>
-                                    </button>
-                                    <button class="btn btn-round-lg ">
-                                      <i class="fas fa-euro-sign fa-lg red-icon"></i>
-                                      <span>Gratuit</span>
-                                    </button>
-                                </div>
-                            </div>
                         </div>
                     </div>
 
                     <div class="list-item">
                         <div class="list-item-header">
-                            <img src="images/TEDxINSA/TEDx.png"/>
+                            <img src="images/lamouette.png"/>
                             <div style="padding-right: 40px;">
-                                <span class="item-title">TEDxINSA</span> <br/>
+                                <span class="item-title">La Mouette</span> <br/>
                                 <span class="item-date">5 octobre 2018 à 20:37</span>
                             </div>
                         </div>
@@ -154,32 +100,32 @@
 
                     <div class="list-item">
                         <div class="list-item-header">
-                            <img src="images/TEDxINSA/TEDx.png"/>
+                            <img src="images/lamouette.png"/>
                             <div style="padding-right: 40px;">
-                                <span class="item-title">TEDxINSA</span> <br/>
+                                <span class="item-title">La Mouette</span> <br/>
                                 <span class="item-date">25 septembre 2018 à 14:21</span>
                             </div>
                         </div>
-                        <img src="images\TEDxINSA\AGRecrutement.png" class="img-fluid" alt="Responsive image">
+                        <img src="images\aglamouette.jpg" class="img-fluid" alt="Responsive image">
                         <div class="container">
                             <p class="list-item-content">
-                                On vous attend nombreux à l'AG de Recrutement TEDxINSA ! Avec tous nos pôle vous trouverez forcement une place pour vous avec nous !
+                                L'association d'audio-visuel La Mouette fait sa rentée ! La réalisation, le cadrage, le scénario et le cinéma en général t'intéressent ? Tu veux développer tes compétences dans ce domaine ? Notre association est faite pour toi. Que tu sois débutant ou expérimenté, nous t'accueillerons les bras grands ouverts. On te donne alors rendez-vous le mardi 2 octobre 19h à l'amphi Freyssinet du bâtiment GCU pour l'AG de recrutement !
                             </p>
                             <div class="row">
                                 <div class="col">
                                     <button class="btn btn-round-lg ">
                                       <i class="far fa-calendar-alt fa-lg red-icon"></i>
-                                      <span>3 Mars 2018</span>
+                                      <span>2 Octobre 2018</span>
                                     </button>
                                     <button class="btn btn-round-lg ">
                                       <i class="fas fa-map-marker-alt fa-lg red-icon"></i>
-                                      <span>Salle 335 en IF</span>
+                                      <span>Amphi Freyssinet</span>
                                     </button>
                                 </div>
                                 <div class="col">
                                     <button class="btn btn-round-lg ">
                                       <i class="far fa-clock fa-lg red-icon"></i>
-                                      <span>18h30 - 20h00</span>
+                                      <span>19h00 - 21h00</span>
                                     </button>
                                     <button class="btn btn-round-lg ">
                                       <i class="fas fa-euro-sign fa-lg red-icon"></i>
@@ -193,16 +139,16 @@
 
                 <!-- ******************************** CONTENT PhotosPage ******************************** -->
                 <div id="assoPhotosPage" style="display: none;">
-                    <img src="images\TEDxINSA\IMG_0246.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
-                    <img src="images\TEDxINSA\IMG_0063.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
-                    <img src="images\TEDxINSA\IMG_0650.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
-                    <img src="images\TEDxINSA\IMG_0322.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
-                    <img src="images\TEDxINSA\IMG_0639.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
-                    <img src="images\TEDxINSA\IMG_0648.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
-                    <img src="images\TEDxINSA\IMG_0658.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
-                    <img src="images\TEDxINSA\IMG_0832.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
-                    <img src="images\TEDxINSA\IMG_0843.png" class="rounded float-right thumbnail-img" onclick="showimg(this)">
-                    <img src="images\TEDxINSA\IMG_0848.png" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm1.jpg" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm2.jpg" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm3.jpg" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm4.jpg" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm5.jpg" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm6.jpg" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm7.jpg" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm8.jpg" class="rounded float-left thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm9.jpg" class="rounded float-right thumbnail-img" onclick="showimg(this)">
+                    <img src="images\LaMouette\lm10.jpg" class="rounded float-left thumbnail-img" onclick="showimg(this)">
                 </div>
 
                 <footer class="footer">
