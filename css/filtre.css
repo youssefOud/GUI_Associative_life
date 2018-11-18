@@ -1,10 +1,14 @@
+#filtrePage{
+  position: relative;
+}
+
 body{
 
   font-family:'Roboto';
 }
-.list-group-item {
-  font-family:'Roboto';
-  color: #676767;
+
+.containerList{
+  margin-top: 52px;
 }
 
 .badge, .checkbox {
@@ -36,11 +40,12 @@ span#test1 {
 }
 
 .fa-check-square {
-  color: #D6180A;
+  color: var(--main-red);
   align-content: center;
 }
 
 .gros {
+<<<<<<< HEAD
     color:grey;
     border-color: grey;
     font-size: 1.125rem;
@@ -60,17 +65,50 @@ input[type=checkbox] + label:before {
 input[type=checkbox]:checked + label:before {
     content: "\f14a";
     color:#D6180A;
+=======
+  color: var(--main-darkgrey);
+  border-color: var(--main-darkgrey);
+  font-size: 1.125rem;
+}
+
+input[type=checkbox] {
+  display:none;
+}
+
+input[type=checkbox] + label {
+  cursor:pointer;
+}
+
+input[type=checkbox] + label:before {
+  font-family: FontAwesome;
+  display: block;
+  content: "\f096";
+  width:1.125rem
+}
+
+input[type=checkbox]:checked + label:before {
+  content: "\f14a"; 
+  color: var(--main-red);
+>>>>>>> a00dd46681971746f3143f22f6b44766891e41de
 }
 
 .list-group-item {
-  margin-top: 0.450rem;
-  margin-bottom: 0.450rem;
-  background-color: #E9E9E9;
+  font-family:'Roboto';
+  color: var(--main-darkgrey);
+  border-radius: 0;
+  border-width: 0;
+  margin-top: 0;
+  margin-bottom: 7px;
+  background-color: var(--main-grey);
   font-family: "roboto regular";
 }
 
 .assos, .assos2 {
-  background-color: #F7F7F7;
+  background-color: var(--main-lightgrey);
+}
+
+.fa-angle-left{
+  vertical-align: middle;
 }
 
 .valider{

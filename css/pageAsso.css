@@ -1,3 +1,7 @@
+#filtrePage{
+    position: relative;
+}
+
 .tabs > a {
     text-align: center;
     line-height: var(--main-navheight);
