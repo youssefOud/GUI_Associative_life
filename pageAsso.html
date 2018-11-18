@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <script src="js/util.js"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" crossorigin="anonymous">
@@ -24,7 +25,7 @@
         <div id="pageAsso" class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
             <header class="bmd-layout-header">
                 <nav class="navbar">
-                    <a class="nav-item nav-link return-link" onclick="switchPage(5)"><i class="fas fa-angle-left fa-2x"></i></a>
+                    <a class="nav-item nav-link return-link" onclick="back()"><i class="fas fa-angle-left fa-2x"></i></a>
                     <a class="navbar-brand">TEDxINSA</a>
                     <form class="form-inline">
                         <a class="nav-item nav-link star-link"><i class="far fa-star fa-lg"></i></a>
@@ -245,6 +246,16 @@
             $("html").removeClass("html-full-img");
             $("body").removeClass("body-full-img");
             $("#pageAsso").show();
+    }
+
+    function back()
+    {
+        if($("#assoHomePage").is(":visible"))
+        {
+            window.history.back();
+        } else {
+            switchPage(5);
+        }
     }
 
     function switchPage(page){

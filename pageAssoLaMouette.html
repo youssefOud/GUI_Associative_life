@@ -24,7 +24,7 @@
         <div id="pageAsso" class="bmd-layout-container bmd-drawer-f-r bmd-drawer-overlay">
             <header class="bmd-layout-header">
                 <nav class="navbar">
-                    <a class="nav-item nav-link return-link" onclick="switchPage(5)"><i class="fas fa-angle-left fa-2x"></i></a>
+                    <a class="nav-item nav-link return-link" onclick="back()"><i class="fas fa-angle-left fa-2x"></i></a>
                     <a class="navbar-brand">La Mouette</a>
                     <form class="form-inline">
                         <a class="nav-item nav-link star-link"><i class="far fa-star fa-lg"></i></a>
@@ -192,6 +192,16 @@
             $("html").removeClass("html-full-img");
             $("body").removeClass("body-full-img");
             $("#pageAsso").show();
+    }
+
+    function back()
+    {
+        if($("#assoHomePage").is(":visible"))
+        {
+            window.history.back();
+        } else {
+            switchPage(5);
+        }
     }
 
     function switchPage(page){
