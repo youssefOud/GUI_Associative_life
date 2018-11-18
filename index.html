@@ -32,7 +32,7 @@
                   <form class="form-inline">
                       <a class="nav-item nav-link" href="search.html"><i class="fas fa-search nav-ico"></i></a>
                       <a class="nav-item nav-link" id="filtreButton" onclick="filterRedirect();"><i class="fas fa-filter nav-ico"></i></a>
-                      <a class="nav-item nav-link" data-toggle="drawer" data-target="#dw-s1"><i class="fas fa-user nav-ico"></i></a>
+                      <a class="nav-item nav-link" data-toggle="drawer" data-target="#dw-s1" id="drawerButton"><i class="fas fa-user nav-ico"></i></a>
                   </form>
               </nav>
           </header>
@@ -325,8 +325,8 @@
                     </button>
                   </div>
 
-                  <div class="asso" onclick="window.location.href = 'pageAsso.html'">
-                    <div class="logoNom">
+                  <div class="asso" >
+                    <div class="logoNom" onclick="window.location.href = 'pageAsso.html'">
                         <img class="thumbnail" src="images/lamouette.png" />
                         <div class="nomAsso">
                             <span class="titreAsso">La Mouette</span> <br/>
@@ -368,7 +368,7 @@
                   </div>
 
                   <div class="asso pasCin" >
-                    <div class="logoNom">
+                    <div class="logoNom" onclick="window.location.href = 'pageAssoX.html'">
                         <img class="thumbnail" src="images/TEDxINSA/TEDx.png" />
                         <div class="nomAsso">
                             <span class="titreAsso">TEDxINSA</span> <br/>
@@ -396,12 +396,18 @@
                   </div>
             </div>
 
+            <!-- CALENDAR CONTENT ******************************** -->
+            <div id="calendarPage">
+                <br />
+                <img src="images/calendar.png" alt="calendat" width="100%">
+            </div>
+
             <footer class="footer">
               <div class="container">
                 <div class="row">
                   <i class="col far fa-newspaper fa-lg footer-ico-active" onclick="switchPage(0)" id="newsFooterButton"></i>
                   <i class="col fas fa-list-ul fa-lg footer-ico" onclick="switchPage(1)" id="assoListFooterButton"></i>
-                  <i class="col far fa-calendar-alt fa-lg footer-ico" data-toggle="drawer" data-target="#dw-s2" ></i>
+                  <i class="col far fa-calendar-alt fa-lg footer-ico" onclick="switchPage(2)" id="calendarFooterButton"></i>
                 </div>
               </div>
             </footer>
@@ -455,8 +461,12 @@
       $("#drawerCon").hide();
       $("#drawerNotCon").show();
       $(".favStar").addClass("far").removeClass("fas");
-      $(".fav").attr("onclick", "window.location.href = 'conIns.html?#ins'");
+      $(".fav").attr("onclick", "$('#drawerButton').click();");
     }
+
+    $('#calendar').fullCalendar({
+      defaultView: 'month'
+    });
   });
 
   function filterRedirect(){
@@ -471,17 +481,31 @@
         $("#pageTitle").text("Fil d'actualité");
         $("#newsPage").show();
         $("#assolistPage").hide();
+        $("#calendarPage").hide();
         $("#assoListFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
         $("#newsFooterButton").addClass("footer-ico-active").removeClass("footer-ico");
+        $("#calendarFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
         location.hash = "actu";
         break;
       case 1:
         $("#pageTitle").text("Liste d'assos");
         $("#newsPage").hide();
         $("#assolistPage").show();
+        $("#calendarPage").hide();
         $("#newsFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
         $("#assoListFooterButton").addClass("footer-ico-active").removeClass("footer-ico");
+        $("#calendarFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
         location.hash = "asso";
+        break;
+      case 2:
+        $("#pageTitle").text("Calendrier");
+        $("#newsPage").hide();
+        $("#assolistPage").hide();
+        $("#calendarPage").show();
+        $("#newsFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
+        $("#calendarFooterButton").addClass("footer-ico-active").removeClass("footer-ico");
+        $("#assoListFooterButton").addClass("footer-ico").removeClass("footer-ico-active");
+        location.hash = "cal";
         break;
       default:
         break;
