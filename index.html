@@ -11,7 +11,7 @@
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" crossorigin="anonymous">
@@ -20,7 +20,6 @@
     <link href="css/stickynavbar.css" rel="stylesheet">
     <link href="css/pageAsso.css" rel="stylesheet">
     <link rel="stylesheet" href="css/fontcodes.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
     <link rel="stylesheet" href="css/ListeAssos.css">
   </head>
 
@@ -53,7 +52,7 @@
           </div>
           <main class="bmd-layout-content">
             <!-- NEWS CONTENT ******************************** -->
-            <div id="assoNewsPage">
+            <div id="newsPage">
                 <div class="list-item">
                     <div class="list-item-header">
                         <img src="images/TEDxINSA/TEDx.png"/>
@@ -90,6 +89,7 @@
                             </div>
                         </div>
                     </div>
+                    <br />
                 </div>
 
                 <div class="list-item">
@@ -105,6 +105,7 @@
                             Merci à tous d'être venus si nombreux à notre spectacle de junglage hier soir à la rotonde ! C'était énorme !
                         </p>
                     </div>
+                    <br />
                 </div>
 
                 <div class="list-item">
@@ -121,6 +122,7 @@
                             Vous n'êtes pas au courant ? La Mouette et Graine d'Image ouvrent leur tout nouveau site internet ! Vous pourrez y réserver des créneaux photos ou des captations videos, ou encore commander vos photos en ligne !
                         </p>
                     </div>
+                    <br />
                 </div>
 
                     <div class="list-item">
@@ -160,6 +162,7 @@
                             </div>
                         </div>
                     </div>
+                    <br />
             </div>
 
 
@@ -348,6 +351,7 @@ $( ".fav" ).click(function(event) {
     event.currentTarget.firstElementChild.classList.replace("far","fas");
   }
 });
+
   function findParameter(parameterName) {
     var result = null,
         tmp = [];
