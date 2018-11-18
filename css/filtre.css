@@ -72,3 +72,17 @@ input[type=checkbox]:checked + label:before {
 .assos, .assos2 {
   background-color: #F7F7F7;
 }
+
+.valider{
+  font-family: var(--main-mediumbutton-text-font);
+  font-size: var(--main-mediumbutton-text-size);
+  background-color: var(--main-white);
+  border-radius: 12px!important;
+  width: auto;
+  border: 2px solid: var(--main-grey);
+  padding-top: 3px;
+  padding-bottom: 4px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: var(--main-darkgrey);
+}
