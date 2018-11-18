@@ -132,7 +132,6 @@
     var con = findParameter("con");
     console.log("connected ?" + con);
     if(con === "true"){
-      $(".con").hide();
       $(".valider").attr("onclick", "window.location.href = 'index.html?filt=true&con=true#asso'");
     }else{
       $(".con").hide();
