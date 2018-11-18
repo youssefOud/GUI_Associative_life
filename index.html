@@ -38,25 +38,29 @@
           </header>
           <!-- DRAWER ******************************** -->
           <div id="dw-s1" class="bmd-layout-drawer bg-faded">
-            <span id="drawerCon" style="margin: 5% auto auto auto;">
-              <header>
-                <a class="navbar-brand">Bonjour Rémi !</a>
-              </header>
-              <main class="drawer-menu">
-                <ul class="list-group">
-                  <a class="list-group-item"><i class="fas fa-user-circle fa-2x"></i>Mes infos</a>
-                  <a class="list-group-item"><i class="fas fa-star fa-2x"></i>Mes favoris</a>
-                  <a class="list-group-item"><i class="fas fa-envelope fa-2x"></i>Nous contacter</a>
-                </ul>
-              </main>
-              <footer class="drawer-buttons">
-                <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'index.html?#actu'">Déconnexion</button>
-              </footer>
-            </span>
-            <div id="drawerNotCon" style="width:100%; text-align:center;">
+              <div id="drawerCon" style="margin: 5% auto auto auto;">
+                <header>
+                  <a class="navbar-brand title-volet">Bonjour Rémi !</a>
+                </header>
+                <main class="drawer-menu">
+                  <ul class="list-group">
+                    <a class="list-group-item item-volet"><i class="fas fa-user-circle fa-lg"></i>Mes infos</a>
+                    <a class="list-group-item item-volet"><i class="fas fa-star fa-lg"></i>Mes favoris</a>
+                    <a class="list-group-item item-volet"><i class="fas fa-envelope fa-lg"></i>Nous contacter</a>
+                  </ul>
+                </main>
+            </div>
+          <footer class="drawer-buttons div-deco-but">
+              <button type="button" class="btn btn-round-lg drawer-button deconnexion" onclick="window.location.href = 'index.html?#actu'">DECONNEXION</button>
+          </footer>
+
+
+            <div id="drawerNotCon">
+                <p>En vous inscrivant, vous accédez à des contenus exclusifs.
+                </p>
                 <footer class="drawer-buttons">
-                    <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'conIns.html?#con'">Se connecter</button>
-                    <button type="button" class="btn btn-outline-danger drawer-button" onclick="window.location.href = 'conIns.html?#ins'">S'inscrire</button>
+                    <button type="button" class="btn btn-round-lg drawer-button connexion" onclick="window.location.href = 'conIns.html?#con'">CONNEXION</button>
+                    <button type="button" class="btn btn-round-lg drawer-button connexion" onclick="window.location.href = 'conIns.html?#ins'">INSCRIPTION</button>
                 </footer>
             </div>
           </div>
@@ -64,12 +68,16 @@
             <!-- NEWS CONTENT ******************************** -->
             <div id="newsPage">
                 <div class="list-item pasCin">
-                    <div class="list-item-header" >
+                    <div class="asso list-item-header" >
                         <img src="images/TEDxINSA/TEDx.png"/>
                         <div style="padding-right: 40px;">
                             <span class="item-title">TEDxINSA</span> <br/>
                             <span class="item-date">15 octobre 2018 à 15:21</span>
                         </div>
+                        <button class="btn btn-round-lg btn-xs fav"  >
+                          <i class="fas fa-star favStar favStarfavStar fa-xs" ></i>
+                          <span class="textFav">Favoris</span>
+                        </button>
                     </div>
                     <img src="images\TEDxINSA\TEDxINSA_Couverture.png" class="img-fluid" alt="Responsive image">
                     <div class="container">
@@ -103,12 +111,16 @@
                 </div>
 
                 <div class="list-item pasCin">
-                    <div class="list-item-header">
+                    <div class="asso list-item-header">
                         <img src="images/ajil.png"/>
                         <div style="padding-right: 40px;">
                             <span class="item-title">AJIL</span> <br/>
                             <span class="item-date">12 octobre 2018 à 16:35</span>
                         </div>
+                        <button class="btn btn-round-lg btn-xs fav"  >
+                          <i class="fas fa-star favStar favStarfavStar fa-xs" ></i>
+                          <span class="textFav">Favoris</span>
+                        </button>
                     </div>
                     <div class="container">
                         <p class="list-item-content">
@@ -119,12 +131,16 @@
                 </div>
 
                 <div class="list-item" >
-                    <div class="list-item-header"  onclick="window.location.href = 'pageAsso.html'">
+                    <div class="asso list-item-header"  onclick="window.location.href = 'pageAsso.html'">
                         <img src="images/lamouette.png"/>
                         <div style="padding-right: 40px;">
                             <span class="item-title">La Mouette</span> <br/>
                             <span class="item-date">20 septembre 2018 à 10:42</span>
                         </div>
+                        <button class="btn btn-round-lg btn-xs fav"  >
+                          <i class="fas fa-star favStar favStarfavStar fa-xs" ></i>
+                          <span class="textFav">Favoris</span>
+                        </button>
                     </div>
                     <img src="images\grainedemouette.png" class="img-fluid" alt="Responsive image">
                     <div class="container">
@@ -136,12 +152,16 @@
                 </div>
 
                 <div class="list-item pasCin">
-                    <div class="list-item-header">
+                    <div class="asso list-item-header">
                         <img src="images/lezarts.png"/>
                         <div style="padding-right: 40px;">
                             <span class="item-title">Lezarts</span> <br/>
                             <span class="item-date">25 octobre 2018 à 17:35</span>
                         </div>
+                        <button class="btn btn-round-lg btn-xs fav"  >
+                          <i class="fas fa-star favStar favStarfavStar fa-xs" ></i>
+                          <span class="textFav">Favoris</span>
+                        </button>
                     </div>
                     <img src="images\lezart.jpg" class="img-fluid" alt="Responsive image">
                     <div class="container">
