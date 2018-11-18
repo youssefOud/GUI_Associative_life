@@ -84,3 +84,6 @@
   height: 41px;
   color: var(--main-white) !important;
 }
+#divConBut{
+    text-align: center;
+}
