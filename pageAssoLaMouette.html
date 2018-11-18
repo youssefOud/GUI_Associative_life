@@ -27,7 +27,7 @@
                     <a class="nav-item nav-link return-link" onclick="back()"><i class="fas fa-angle-left fa-2x"></i></a>
                     <a class="navbar-brand">La Mouette</a>
                     <form class="form-inline">
-                        <a class="nav-item nav-link star-link"><i class="far fa-star fa-lg"></i></a>
+                        <a class="nav-item nav-link star-link" onclick="starToogle()"><i id="favoriStar" class="far fa-star fa-lg"></i></a>
                     </form>
                 </nav>
             </header>
@@ -201,6 +201,18 @@
             window.history.back();
         } else {
             switchPage(5);
+        }
+    }
+
+    function starToogle()
+    {
+        if($("#favoriStar").hasClass("fas"))
+        {
+            $("#favoriStar").removeClass("fas");
+            $("#favoriStar").addClass("far");
+        }else{
+            $("#favoriStar").removeClass("far");
+            $("#favoriStar").addClass("fas");
         }
     }
 
