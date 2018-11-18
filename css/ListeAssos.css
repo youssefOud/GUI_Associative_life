@@ -1,7 +1,11 @@
 .fav{
-  border-radius : 22.5px;
+  border-radius : 22.5px!important;
   background-color:#FCFCFC;
   border:2px solid #E9E9E9;
+}
+
+.btn:focus{
+  outline:none;
 }
 
 .asso{
