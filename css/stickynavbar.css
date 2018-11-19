@@ -22,7 +22,8 @@
 }
 
 .bmd-layout-content{
-    margin-top: 60px;
+    margin-top: 52px;
+    margin-bottom: 52px;
 }
 
 #dw-s1{
@@ -110,3 +111,4 @@
 .bg-faded{
     background-color: var(--main-lightgrey);
 }
+html,body { height:100%; }
