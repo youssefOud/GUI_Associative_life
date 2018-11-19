@@ -283,4 +283,14 @@
                 break;
     }
   }
+
+  $(document).ready(function() {
+      var con = findParameter("con");
+      console.log("connected ?" + con);
+      if(con === "true"){
+      }else{
+          console.log("ON CACHE L'ETOILE");
+        $(".star-link").hide();
+      }
+    });
 </script>

@@ -65,12 +65,13 @@
             </div>
           </div>
           <main class="bmd-layout-content" style="height:100%;">
+              <div style="height:8px;"></div>
               <!-- NEWS CONTENT ******************************** -->
               <div id="newsPage" >
                   <div class="list-item pasCin">
                       <div class="asso list-item-header" >
-                          <img src="images/TEDxINSA/TEDx.png"/>
-                          <div style="padding-right: 40px;">
+                          <img src="images/TEDxINSA/TEDx.png" onclick="pageAsso('pageAssoX.html')"/>
+                          <div style="padding-right: 40px;" onclick="pageAsso('pageAssoX.html')">
                               <span class="item-title">TEDxINSA</span> <br/>
                               <span class="item-date">15 octobre 2018 à 15:21</span>
                           </div>
@@ -131,9 +132,9 @@
                   </div>
 
                   <div class="list-item" >
-                      <div class="asso list-item-header"  onclick="window.location.href = 'pageAsso.html'">
-                          <img src="images/lamouette.png"/>
-                          <div style="padding-right: 40px;">
+                      <div class="asso list-item-header">
+                          <img src="images/lamouette.png" onclick="pageAsso('pageAsso.html')" />
+                          <div style="padding-right: 40px;" onclick="pageAsso('pageAsso.html')" >
                               <span class="item-title">La Mouette</span> <br/>
                               <span class="item-date">20 septembre 2018 à 10:42</span>
                           </div>
@@ -194,7 +195,6 @@
                       <br />
                   </div>
               </div>
-
 
               <!-- LISTE ASSO CONTENT ******************************** -->
               <div id="assolistPage">
@@ -326,7 +326,7 @@
                     </div>
 
                     <div class="asso" >
-                      <div class="logoNom" onclick="window.location.href = 'pageAsso.html'">
+                      <div class="logoNom" onclick="pageAsso('pageAsso.html')">
                           <img class="thumbnail" src="images/lamouette.png" />
                           <div class="nomAsso">
                               <span class="titreAsso">La Mouette</span> <br/>
@@ -368,7 +368,7 @@
                     </div>
 
                     <div class="asso pasCin" >
-                      <div class="logoNom" onclick="window.location.href = 'pageAssoX.html'">
+                      <div class="logoNom" onclick="pageAsso('pageAssoX.html')">
                           <img class="thumbnail" src="images/TEDxINSA/TEDx.png" />
                           <div class="nomAsso">
                               <span class="titreAsso">TEDxINSA</span> <br/>
@@ -420,16 +420,6 @@
 </html>
 
 <script>
-  $( ".fav" ).click(function(event) {
-    if(event.currentTarget.firstElementChild.classList[0]=="fas"){
-      event.currentTarget.firstElementChild.classList.replace("fas","far");
-    }
-    else{
-      event.currentTarget.firstElementChild.classList.replace("far","fas");
-    }
-    event.currentTarget.blur();
-  });
-
   $(document).ready(function() {
     $('body').bootstrapMaterialDesign();
 
@@ -457,10 +447,19 @@
       console.log("hey");
       $("#drawerCon").show();
       $("#drawerNotCon").hide();
+      $( ".fav" ).click(function(event) {
+        if(event.currentTarget.firstElementChild.classList[0]=="fas"){
+          event.currentTarget.firstElementChild.classList.replace("fas","far");
+        }
+        else{
+          event.currentTarget.firstElementChild.classList.replace("far","fas");
+        }
+        event.currentTarget.blur();
+      });
     }else{
       $("#drawerCon").hide();
       $("#drawerNotCon").show();
-      $(".favStar").addClass("far").removeClass("fas");
+      $(".favStar").addClass("far").removeClass("fas").removeClass("fas");
       $(".fav").attr("onclick", "$('#drawerButton').click();");
     }
 
@@ -468,6 +467,8 @@
       defaultView: 'month'
     });
   });
+
+
 
   function filterRedirect(){
       var con = findParameter("con");
@@ -511,5 +512,10 @@
         break;
     }
 
+  }
+
+  function pageAsso(page){
+    var con = findParameter("con");
+    window.location.href = page+"?con="+con;
   }
 </script>
