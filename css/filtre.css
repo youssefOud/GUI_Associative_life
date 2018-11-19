@@ -3,8 +3,7 @@
 }
 
 body{
-
-  font-family:'Roboto';
+  font-family:'Roboto', sans-serif;
 }
 
 .containerList{
@@ -71,18 +70,13 @@ input[type=checkbox]:checked + label:before {
 }
 
 .list-group-item {
-  font-family:'Roboto';
+  font-family:var(--main-item-content-font);
   color: var(--main-darkgrey);
   border-radius: 0;
   border-width: 0;
   margin-top: 0;
   margin-bottom: 7px;
   background-color: var(--main-grey);
-  font-family: "roboto regular";
-}
-
-.assos, .assos2 {
-  background-color: var(--main-lightgrey);
 }
 
 .fa-angle-left{
@@ -101,4 +95,8 @@ input[type=checkbox]:checked + label:before {
   padding-left: 30px;
   padding-right: 30px;
   color: var(--main-darkgrey);
+}
+
+span {
+  font-family:'Roboto', sans-serif;
 }

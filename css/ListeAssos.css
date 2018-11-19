@@ -8,10 +8,10 @@ body{
   width: auto;
   background-color: var(--main-white);
   border:2px solid: var(--main-grey);
-  padding-top: 1px;
-  padding-bottom: 4px;
-  padding-left: 7px;
-  padding-right: 7px;
+  padding-top: 2px!important;
+  padding-bottom: 4px!important;
+  padding-left: 7px!important;
+  padding-right: 7px!important;
 }
 
 .btn:focus{
