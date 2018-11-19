@@ -209,15 +209,7 @@
                     </div>
                 </div>
 
-                <footer class="footer">
-                    <div class="container">
-                        <div class="row">
-                            <a class="icon-link col" href="index.html"><i class="col far fa-newspaper fa-lg footer-ico"></i></a>
-                            <a class="icon-link col" href="ListeAssos.html"><i class="col fas fa-list-ul fa-lg footer-ico" ></i></a>
-                            <a class="icon-link col" href="calendar.html"><i class="col far fa-calendar-alt fa-lg footer-ico" data-toggle="drawer" data-target="#dw-s2" ></i></a>
-                        </div>
-                    </div>
-                </footer>
+                
             </main>
         </div>
 
@@ -233,6 +225,16 @@
                 </tr>
             </table>
         </div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <a class="icon-link col" onclick="direct('index.html')"><i class="col far fa-newspaper fa-lg footer-ico"></i></a>
+                    <a class="icon-link col" onclick="direct('ListeAssos.html')"><i class="col fas fa-list-ul fa-lg footer-ico" ></i></a>
+                    <a class="icon-link col" onclick="direct('calendar.html')"><i class="col far fa-calendar-alt fa-lg footer-ico" data-toggle="drawer" data-target="#dw-s2" ></i></a>
+                </div>
+            </div>
+        </footer>
   </body>
 </html>
 
@@ -289,8 +291,12 @@
       console.log("connected ?" + con);
       if(con === "true"){
       }else{
-          console.log("ON CACHE L'ETOILE");
         $(".star-link").hide();
       }
     });
+
+    function direct(page){
+        var con = findParameter("con");
+        window.location.href = page+"?filt=true&con"+con;
+    }
 </script>
