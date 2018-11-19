@@ -86,7 +86,14 @@
   height: 41px;
   color: var(--main-white) !important;
 }
+#divConBut{
+    margin-top: 50px;
+}
+#divInsBut{
+    margin-top: 10px;
+}
 #divConBut,
+#divInsBut,
 .div-deco-but{
     text-align: center;
 }
@@ -112,3 +119,17 @@
     background-color: var(--main-lightgrey);
 }
 html,body { height:100%; }
+.title{
+    font-size: 21px;
+    font-family: 'Verdana';
+    color: var(--main-red);
+    text-align: center;
+}
+.navbar-brand {
+    font-size: 21px;
+    font-family: 'Verdana';
+}
+.mdpoublie{
+    text-align: right;
+    font-size: small;
+}
