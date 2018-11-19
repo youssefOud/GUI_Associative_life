@@ -516,6 +516,7 @@
 
   function pageAsso(page){
     var con = findParameter("con");
-    window.location.href = page+"?con="+con;
+    var filt = findParameter("filt");
+    window.location.href = page+"?con="+con+"&filt="+filt;
   }
 </script>
