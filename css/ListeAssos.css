@@ -1,5 +1,5 @@
 body{
-  
+
 }
 
 
@@ -24,8 +24,8 @@ body{
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-grey);
-  padding:10px; 
-  margin-bottom:4px;
+  padding:10px;
+  margin-bottom:8px;
 }
 
 .logoNom{
@@ -51,21 +51,21 @@ body{
 }
 
 .titreAsso{
-  color:var(--main-darkgrey); 
-  font-family:'Roboto',sans-serif; 
+  color:var(--main-darkgrey);
+  font-family:'Roboto',sans-serif;
   font-size: 20px;
 }
 
 .categAsso{
-  color:var(--main-darkgrey); 
-  font-family:'Roboto',sans-serif; 
-  font-weight:100; 
+  color:var(--main-darkgrey);
+  font-family:'Roboto',sans-serif;
+  font-weight:100;
   font-size: 15px;
 }
 
 .textFav{
-  color:var(--main-darkgrey); 
-  font-family:'Roboto',sans-serif; 
+  color:var(--main-darkgrey);
+  font-family:'Roboto',sans-serif;
   font-size: 13px;
 }
 
