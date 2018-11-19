@@ -143,19 +143,23 @@
 
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
     <link href="css/colorcodes.css" rel="stylesheet">
-    <link href="css/conIns.css" rel="stylesheet">
     <link href="css/stickynavbar.css" rel="stylesheet">
 
   </head>
   <body>
         <header>
             <nav class="navbar">
-                <a class="nav-item nav-link return-link" onclick="goBack()"><i class="fas fa-angle-left fa-2x"></i></a>
+                    <a class="nav-item nav-link return-link" onclick="goBack()"><i class="fas fa-angle-left fa-2x"></i></a>
+                    <a class="navbar-brand">INSAsso</a>
+                    <form class="form-inline">
+                        <a class="nav-item nav-link star-link" style="color: var(--main-red);"><i id="favoriStar" class="far fa-star fa-lg"></i></a>
+                    </form>
             </nav>
         </header>
         <div class="container-fluid" style="margin-top: 60px;">
             <div id="conPage">
                     <br>
+                    <p class="title">Connexion</p>
                     <form>
                         <div class="form-group">
                             <label >Mail </label>
@@ -164,6 +168,7 @@
                         <div class="form-group">
                             <label >Mot de passe </label>
                             <input type="password" class="form-control" >
+                            <p class="mdpoublie">Mot de passe oublié</p>
                         </div>
                         <div id="divConBut">
                             <button type="button" class="btn btn-round-lg drawer-button connexion" onclick="window.location.href = 'index.html?con=true#actu'">CONNEXION</button>
@@ -173,6 +178,7 @@
 
             <div id="insPage">
                     <br>
+                    <p class="title">Inscription</p>
                     <form>
                         <div class="form-group">
                             <label >Nom </label>
@@ -194,7 +200,7 @@
                             <label >Confirmation mot de passe </label>
                             <input type="password" class="form-control" >
                         </div>
-                        <div id="divConBut">
+                        <div id="divInsBut">
                             <button type="button" class="btn btn-round-lg drawer-button connexion" onclick="window.location.href = 'index.html?con=true#actu'">INSCRIPTION</button>
                         </div>
                     </form>
